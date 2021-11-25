@@ -52,12 +52,13 @@ var searchData=
   ['rundata_49',['RunData',['../d1/d16/class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_command_line_test_1_1_run_data.html',1,'UnityEditor::TestTools::TestRunner::CommandLineTest']]],
   ['runfinishedevent_50',['RunFinishedEvent',['../dd/da1/class_unity_engine_1_1_test_tools_1_1_test_runner_1_1_run_finished_event.html',1,'UnityEngine::TestTools::TestRunner']]],
   ['runnablebehaviour_51',['RunnableBehaviour',['../dd/d99/class_null_framework_exception_1_1_runnable_behaviour.html',1,'NullFrameworkException']]],
-  ['runnableutils_52',['RunnableUtils',['../d9/d99/class_null_framework_exception_1_1_runnable_utils.html',1,'NullFrameworkException']]],
-  ['runsettings_53',['RunSettings',['../d6/d6b/class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_command_line_test_1_1_run_settings.html',1,'UnityEditor::TestTools::TestRunner::CommandLineTest']]],
-  ['runstartedevent_54',['RunStartedEvent',['../dd/dd0/class_unity_engine_1_1_test_tools_1_1_test_runner_1_1_run_started_event.html',1,'UnityEngine::TestTools::TestRunner']]],
-  ['runtimeclip_55',['RuntimeClip',['../d3/ded/class_unity_engine_1_1_timeline_1_1_runtime_clip.html',1,'UnityEngine::Timeline']]],
-  ['runtimeclipbase_56',['RuntimeClipBase',['../d4/ddf/class_unity_engine_1_1_timeline_1_1_runtime_clip_base.html',1,'UnityEngine::Timeline']]],
-  ['runtimeelement_57',['RuntimeElement',['../db/d08/class_unity_engine_1_1_timeline_1_1_runtime_element.html',1,'UnityEngine::Timeline']]],
-  ['runtimetestlauncherbase_58',['RuntimeTestLauncherBase',['../d6/d8c/class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_runtime_test_launcher_base.html',1,'UnityEditor::TestTools::TestRunner']]],
-  ['runtimetestrunnerfilter_59',['RuntimeTestRunnerFilter',['../d4/df3/class_unity_engine_1_1_test_tools_1_1_test_runner_1_1_g_u_i_1_1_runtime_test_runner_filter.html',1,'UnityEngine::TestTools::TestRunner::GUI']]]
+  ['runnabletest_52',['RunnableTest',['../da/d25/class_null_framework_exception_1_1_test_1_1_core_1_1_runnable_test.html',1,'NullFrameworkException.Test.Core.RunnableTest'],['../d2/d01/class_null_framework_exception_1_1_test_1_1_core_1_1_runnable_test_1_1_runnable_test.html',1,'NullFrameworkException.Test.Core.RunnableTest.RunnableTest']]],
+  ['runnableutils_53',['RunnableUtils',['../d9/d99/class_null_framework_exception_1_1_runnable_utils.html',1,'NullFrameworkException']]],
+  ['runsettings_54',['RunSettings',['../d6/d6b/class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_command_line_test_1_1_run_settings.html',1,'UnityEditor::TestTools::TestRunner::CommandLineTest']]],
+  ['runstartedevent_55',['RunStartedEvent',['../dd/dd0/class_unity_engine_1_1_test_tools_1_1_test_runner_1_1_run_started_event.html',1,'UnityEngine::TestTools::TestRunner']]],
+  ['runtimeclip_56',['RuntimeClip',['../d3/ded/class_unity_engine_1_1_timeline_1_1_runtime_clip.html',1,'UnityEngine::Timeline']]],
+  ['runtimeclipbase_57',['RuntimeClipBase',['../d4/ddf/class_unity_engine_1_1_timeline_1_1_runtime_clip_base.html',1,'UnityEngine::Timeline']]],
+  ['runtimeelement_58',['RuntimeElement',['../db/d08/class_unity_engine_1_1_timeline_1_1_runtime_element.html',1,'UnityEngine::Timeline']]],
+  ['runtimetestlauncherbase_59',['RuntimeTestLauncherBase',['../d6/d8c/class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_runtime_test_launcher_base.html',1,'UnityEditor::TestTools::TestRunner']]],
+  ['runtimetestrunnerfilter_60',['RuntimeTestRunnerFilter',['../d4/df3/class_unity_engine_1_1_test_tools_1_1_test_runner_1_1_g_u_i_1_1_runtime_test_runner_filter.html',1,'UnityEngine::TestTools::TestRunner::GUI']]]
 ];

@@ -1,4 +1,26 @@
 var searchData=
 [
-  ['exitscript_0',['ExitScript',['../da/dea/class_null_framework_exception_1_1_test_1_1_character_controller_1_1_rigidbody3d_1_1_exit_script.html',1,'NullFrameworkException::Test::CharacterController::Rigidbody3d']]]
+  ['defaulttestworkitem_0',['DefaultTestWorkItem',['../d1/d8d/class_unity_engine_1_1_test_runner_1_1_n_unit_extensions_1_1_runner_1_1_default_test_work_item.html',1,'UnityEngine::TestRunner::NUnitExtensions::Runner']]],
+  ['delayedcallback_1',['DelayedCallback',['../de/d12/class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_delayed_callback.html',1,'UnityEditor::TestTools::TestRunner']]],
+  ['deleteaction_2',['DeleteAction',['../d2/d3d/class_unity_editor_1_1_timeline_1_1_delete_action.html',1,'UnityEditor::Timeline']]],
+  ['deletetracks_3',['DeleteTracks',['../df/d77/class_unity_editor_1_1_timeline_1_1_delete_tracks.html',1,'UnityEditor::Timeline']]],
+  ['deserializer_4',['Deserializer',['../dc/d3a/class_microsoft_1_1_unity_1_1_visual_studio_1_1_editor_1_1_messaging_1_1_deserializer.html',1,'Microsoft::Unity::VisualStudio::Editor::Messaging']]],
+  ['directorcontrolplayable_5',['DirectorControlPlayable',['../d0/d38/class_unity_engine_1_1_timeline_1_1_director_control_playable.html',1,'UnityEngine::Timeline']]],
+  ['directornamedcolor_6',['DirectorNamedColor',['../d7/d1e/class_unity_engine_1_1_timeline_1_1_director_named_color.html',1,'UnityEngine::Timeline']]],
+  ['directornamedcolorinspector_7',['DirectorNamedColorInspector',['../d1/d50/class_unity_editor_1_1_timeline_1_1_director_named_color_inspector.html',1,'UnityEditor::Timeline']]],
+  ['directorstyles_8',['DirectorStyles',['../da/d12/class_unity_editor_1_1_timeline_1_1_director_styles.html',1,'UnityEditor::Timeline']]],
+  ['discovery_9',['Discovery',['../df/d6f/class_microsoft_1_1_unity_1_1_visual_studio_1_1_editor_1_1_discovery.html',1,'Microsoft.Unity.VisualStudio.Editor.Discovery'],['../d3/df1/class_packages_1_1_rider_1_1_editor_1_1_discovery.html',1,'Packages.Rider.Editor.Discovery']]],
+  ['discretetime_10',['DiscreteTime',['../db/dd6/struct_unity_engine_1_1_timeline_1_1_discrete_time.html',1,'UnityEngine::Timeline']]],
+  ['displaynamehelper_11',['DisplayNameHelper',['../da/d0e/class_unity_editor_1_1_timeline_1_1_display_name_helper.html',1,'UnityEditor::Timeline']]],
+  ['docreatesignalasset_12',['DoCreateSignalAsset',['../d2/d0a/class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_asset_inspector_1_1_do_create_signal_asset.html',1,'UnityEditor::Timeline::Signals::SignalAssetInspector']]],
+  ['docreatetimeline_13',['DoCreateTimeline',['../d1/d75/class_unity_editor_1_1_timeline_1_1_timeline_window_1_1_do_create_timeline.html',1,'UnityEditor::Timeline::TimelineWindow']]],
+  ['doublespeed_14',['DoubleSpeed',['../d1/db8/class_unity_editor_1_1_timeline_1_1_double_speed.html',1,'UnityEditor::Timeline']]],
+  ['drawdata_15',['DrawData',['../d6/d0e/struct_unity_editor_1_1_timeline_1_1_timeline_marker_header_g_u_i_1_1_draw_data.html',1,'UnityEditor::Timeline::TimelineMarkerHeaderGUI']]],
+  ['drillintoclip_16',['DrillIntoClip',['../db/d22/class_unity_editor_1_1_timeline_1_1_drill_into_clip.html',1,'UnityEditor::Timeline']]],
+  ['dropdowneditor_17',['DropdownEditor',['../d4/d70/class_t_m_pro_1_1_editor_utilities_1_1_dropdown_editor.html',1,'TMPro::EditorUtilities']]],
+  ['dropdownevent_18',['DropdownEvent',['../d0/dda/class_t_m_pro_1_1_t_m_p___dropdown_1_1_dropdown_event.html',1,'TMPro::TMP_Dropdown']]],
+  ['dropdownitem_19',['DropdownItem',['../d5/d81/class_t_m_pro_1_1_t_m_p___dropdown_1_1_dropdown_item.html',1,'TMPro::TMP_Dropdown']]],
+  ['dropdownoptionlistdrawer_20',['DropdownOptionListDrawer',['../dc/d80/class_t_m_pro_1_1_editor_utilities_1_1_dropdown_option_list_drawer.html',1,'TMPro::EditorUtilities']]],
+  ['duplicateaction_21',['DuplicateAction',['../d4/d0a/class_unity_editor_1_1_timeline_1_1_duplicate_action.html',1,'UnityEditor::Timeline']]],
+  ['duplicatetracks_22',['DuplicateTracks',['../d3/d2b/class_unity_editor_1_1_timeline_1_1_duplicate_tracks.html',1,'UnityEditor::Timeline']]]
 ];

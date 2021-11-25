@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['teleportonkeypress_0',['teleportOnKeypress',['../d3/d04/class_null_framework_exception_1_1_teleport_1_1_player_to_teleport.html#ae497dff75d194a23de11c26c29e15f54',1,'NullFrameworkException::Teleport::PlayerToTeleport']]]
+  ['normalspacingoffset_0',['normalSpacingOffset',['../d7/d7e/class_t_m_pro_1_1_t_m_p___font_asset.html#ae58293c90d5a5e0de8545dd9da02e369',1,'TMPro::TMP_FontAsset']]],
+  ['normalstyle_1',['normalStyle',['../d7/d7e/class_t_m_pro_1_1_t_m_p___font_asset.html#a5e537de3b95199926e373e61b27fc197',1,'TMPro::TMP_FontAsset']]]
 ];

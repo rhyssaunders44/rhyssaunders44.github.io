@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['distanceawayfromplayer_0',['distanceAwayFromPlayer',['../d6/d89/class_null_framework_exception_1_1_teleport_1_1_reference_teleport_point.html#a66f0f363fdbc7e300a6c2159bc64c0a8',1,'NullFrameworkException::Teleport::ReferenceTeleportPoint']]]
+  ['boldspacing_0',['boldSpacing',['../d7/d7e/class_t_m_pro_1_1_t_m_p___font_asset.html#a0a4fbd91f8b10c17a222c4b56a586c50',1,'TMPro::TMP_FontAsset']]],
+  ['boldstyle_1',['boldStyle',['../d7/d7e/class_t_m_pro_1_1_t_m_p___font_asset.html#a16dbe5f4d6f79766b9cd9745c94bbc9c',1,'TMPro::TMP_FontAsset']]]
 ];
