@@ -77,7 +77,7 @@ var searchData=
   ['copyclipstoclipboard_74',['CopyClipsToClipboard',['../d2/d2c/class_unity_editor_1_1_timeline_1_1_copy_clips_to_clipboard.html',1,'UnityEditor::Timeline']]],
   ['copymarkerstoclipboard_75',['CopyMarkersToClipboard',['../dd/d65/class_unity_editor_1_1_timeline_1_1_copy_markers_to_clipboard.html',1,'UnityEditor::Timeline']]],
   ['copytrackstoclipboard_76',['CopyTracksToClipboard',['../d0/d8c/class_unity_editor_1_1_timeline_1_1_copy_tracks_to_clipboard.html',1,'UnityEditor::Timeline']]],
-  ['coretesting_77',['CoreTesting',['../dd/da8/class_null_framework_exception_1_1_test_1_1_core_1_1_core_testing.html',1,'NullFrameworkException.Test.Core.CoreTesting'],['../dd/d54/class_null_framework_exception_1_1_test_1_1_core_1_1_runnable_test_1_1_core_testing.html',1,'NullFrameworkException.Test.Core.RunnableTest.CoreTesting']]],
+  ['coretesting_77',['CoreTesting',['../dd/d54/class_null_framework_exception_1_1_test_1_1_core_1_1_runnable_test_1_1_core_testing.html',1,'NullFrameworkException::Test::Core::RunnableTest']]],
   ['coroutinerunner_78',['CoroutineRunner',['../de/d4d/class_unity_engine_1_1_test_tools_1_1_utils_1_1_coroutine_runner.html',1,'UnityEngine::TestTools::Utils']]],
   ['coroutinesynchronizationcontext_79',['CoroutineSynchronizationContext',['../d0/dda/class_unity_1_1_cloud_1_1_collaborate_1_1_tests_1_1_coroutine_synchronization_context.html',1,'Unity::Cloud::Collaborate::Tests']]],
   ['coroutinetestworkitem_80',['CoroutineTestWorkItem',['../dc/df2/class_unity_engine_1_1_test_runner_1_1_n_unit_extensions_1_1_runner_1_1_coroutine_test_work_item.html',1,'UnityEngine::TestRunner::NUnitExtensions::Runner']]],
