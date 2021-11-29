@@ -69,6 +69,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pri-static-methods">Static Private Member Functions</a> &#124;
 <a href="../../d8/def/class_t_m_pro_1_1_t_m_p___font_asset___creation_menu-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">TMPro.TMP_FontAsset_CreationMenu Class Reference</div></div>
 </div><!--header-->
@@ -80,6 +81,11 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:af41dc7418b69346e5ed04eafaff3d763"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a63280fb5b6620682f8ad0bcbe407d1ad"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d34/class_t_m_pro_1_1_t_m_p___font_asset___creation_menu.html#a63280fb5b6620682f8ad0bcbe407d1ad">CreateFontAsset</a> ()</td></tr>
 <tr class="separator:a63280fb5b6620682f8ad0bcbe407d1ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-methods" name="pri-static-methods"></a>
+Static Private Member Functions</h2></td></tr>
+<tr class="memitem:ae1440714cc5b597870af93cacc94d495"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d34/class_t_m_pro_1_1_t_m_p___font_asset___creation_menu.html#ae1440714cc5b597870af93cacc94d495">CreateFontAssetFromSelectedObject</a> (Object target)</td></tr>
+<tr class="separator:ae1440714cc5b597870af93cacc94d495"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a63280fb5b6620682f8ad0bcbe407d1ad" name="a63280fb5b6620682f8ad0bcbe407d1ad"></a>
@@ -104,110 +110,150 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>        {</div>
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>            Object target = Selection.activeObject;</div>
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span> </div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>            <span class="comment">// Make sure the selection is a font file</span></div>
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>            <span class="keywordflow">if</span> (target == <span class="keyword">null</span> || target.GetType() != typeof(Font))</div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>            {</div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>                Debug.LogWarning(<span class="stringliteral">&quot;A Font file must first be selected in order to create a Font Asset.&quot;</span>);</div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>                <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>            }</div>
+<div class="fragment"><div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>        {</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>            Object[] targets = Selection.objects;</div>
 <div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span> </div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>            Font sourceFont = (Font)target;</div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span> </div>
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>            <span class="keywordtype">string</span> sourceFontFilePath = AssetDatabase.GetAssetPath(target);</div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span> </div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>            <span class="keywordtype">string</span> folderPath = Path.GetDirectoryName(sourceFontFilePath);</div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>            <span class="keywordtype">string</span> assetName = Path.GetFileNameWithoutExtension(sourceFontFilePath);</div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span> </div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>            <span class="keywordtype">string</span> newAssetFilePathWithName = AssetDatabase.GenerateUniqueAssetPath(folderPath + <span class="stringliteral">&quot;/&quot;</span> + assetName + <span class="stringliteral">&quot; SDF.asset&quot;</span>);</div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span> </div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>            <span class="comment">// Initialize FontEngine</span></div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>            FontEngine.InitializeFontEngine();</div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span> </div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>            <span class="comment">// Load Font Face</span></div>
-<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>            <span class="keywordflow">if</span> (FontEngine.LoadFontFace(sourceFont, 90) != FontEngineError.Success)</div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>            {</div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>                Debug.LogWarning(<span class="stringliteral">&quot;Unable to load font face for [&quot;</span> + sourceFont.name + <span class="stringliteral">&quot;]. Make sure \&quot;Include Font Data\&quot; is enabled in the Font Import Settings.&quot;</span>, sourceFont);</div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>                <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>            }</div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span> </div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>            <span class="comment">// Create new Font Asset</span></div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>            <a class="code hl_class" href="../../d7/d7e/class_t_m_pro_1_1_t_m_p___font_asset.html">TMP_FontAsset</a> fontAsset = ScriptableObject.CreateInstance&lt;<a class="code hl_class" href="../../d7/d7e/class_t_m_pro_1_1_t_m_p___font_asset.html">TMP_FontAsset</a>&gt;();</div>
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>            AssetDatabase.CreateAsset(fontAsset, newAssetFilePathWithName);</div>
-<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span> </div>
-<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>            fontAsset.<a class="code hl_property" href="../../d7/d7e/class_t_m_pro_1_1_t_m_p___font_asset.html#abd8857b27602339ef52ee928df174447">version</a> = <span class="stringliteral">&quot;1.1.0&quot;</span>;</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>            <span class="keywordflow">if</span> (targets == <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>            {</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>                Debug.LogWarning(<span class="stringliteral">&quot;A Font file must first be selected in order to create a Font Asset.&quot;</span>);</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>            }</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span> </div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; targets.Length; i++)</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>            {</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>                Object target = targets[i];</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span> </div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>                <span class="comment">// Make sure the selection is a font file</span></div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>                <span class="keywordflow">if</span> (target == <span class="keyword">null</span> || target.GetType() != typeof(Font))</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>                {</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>                    Debug.LogWarning(<span class="stringliteral">&quot;Selected Object [&quot;</span> + target.name + <span class="stringliteral">&quot;] is not a Font file. A Font file must be selected in order to create a Font Asset.&quot;</span>, target);</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>                }</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span> </div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>                CreateFontAssetFromSelectedObject(target);</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>            }</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ae1440714cc5b597870af93cacc94d495" name="ae1440714cc5b597870af93cacc94d495"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1440714cc5b597870af93cacc94d495">&#9670;&nbsp;</a></span>CreateFontAssetFromSelectedObject()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void TMPro.TMP_FontAsset_CreationMenu.CreateFontAssetFromSelectedObject </td>
+          <td>(</td>
+          <td class="paramtype">Object&#160;</td>
+          <td class="paramname"><em>target</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>        {</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>            Font sourceFont = (Font)target;</div>
 <div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span> </div>
-<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>            fontAsset.<a class="code hl_property" href="../../d7/d7e/class_t_m_pro_1_1_t_m_p___font_asset.html#a42eafee651621d6645ea8c424faa2f1a">faceInfo</a> = FontEngine.GetFaceInfo();</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>            <span class="keywordtype">string</span> sourceFontFilePath = AssetDatabase.GetAssetPath(target);</div>
 <div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span> </div>
-<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>            <span class="comment">// Set font reference and GUID</span></div>
-<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>            fontAsset.<a class="code hl_variable" href="../../d7/d7e/class_t_m_pro_1_1_t_m_p___font_asset.html#a93669d6db74053d1c94b3b3313c92737">m_SourceFontFileGUID</a> = AssetDatabase.AssetPathToGUID(sourceFontFilePath);</div>
-<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>            fontAsset.m_SourceFontFile_EditorRef = sourceFont;</div>
-<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>            fontAsset.atlasPopulationMode = AtlasPopulationMode.Dynamic;</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>            <span class="keywordtype">string</span> folderPath = Path.GetDirectoryName(sourceFontFilePath);</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>            <span class="keywordtype">string</span> assetName = Path.GetFileNameWithoutExtension(sourceFontFilePath);</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span> </div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>            <span class="keywordtype">string</span> newAssetFilePathWithName = AssetDatabase.GenerateUniqueAssetPath(folderPath + <span class="stringliteral">&quot;/&quot;</span> + assetName + <span class="stringliteral">&quot; SDF.asset&quot;</span>);</div>
 <div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span> </div>
-<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>            <span class="comment">// Default atlas resolution is 1024 x 1024.</span></div>
-<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>            <span class="keywordtype">int</span> atlasWidth = fontAsset.<a class="code hl_property" href="../../d7/d7e/class_t_m_pro_1_1_t_m_p___font_asset.html#a712350fcdd17a12e79ecc49924c53d83">atlasWidth</a> = 1024;</div>
-<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>            <span class="keywordtype">int</span> atlasHeight = fontAsset.<a class="code hl_property" href="../../d7/d7e/class_t_m_pro_1_1_t_m_p___font_asset.html#aa8cc3b0d4ef6c8f6db402828c82aa439">atlasHeight</a> = 1024;</div>
-<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>            <span class="keywordtype">int</span> atlasPadding = fontAsset.<a class="code hl_property" href="../../d7/d7e/class_t_m_pro_1_1_t_m_p___font_asset.html#a10ea3cba57114687428dcaf11aa8416d">atlasPadding</a> = 9;</div>
-<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>            fontAsset.atlasRenderMode = GlyphRenderMode.SDFAA;</div>
-<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span> </div>
-<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>            <span class="comment">// Initialize array for the font atlas textures.</span></div>
-<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>            fontAsset.<a class="code hl_property" href="../../d7/d7e/class_t_m_pro_1_1_t_m_p___font_asset.html#ac59bb522cd9a07608104b362e94509e3">atlasTextures</a> = <span class="keyword">new</span> Texture2D[1];</div>
-<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span> </div>
-<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>            <span class="comment">// Create atlas texture of size zero.</span></div>
-<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>            Texture2D texture = <span class="keyword">new</span> Texture2D(0, 0, TextureFormat.Alpha8, <span class="keyword">false</span>);</div>
-<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span> </div>
-<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>            texture.name = assetName + <span class="stringliteral">&quot; Atlas&quot;</span>;</div>
-<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>            fontAsset.<a class="code hl_property" href="../../d7/d7e/class_t_m_pro_1_1_t_m_p___font_asset.html#ac59bb522cd9a07608104b362e94509e3">atlasTextures</a>[0] = texture;</div>
-<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>            AssetDatabase.AddObjectToAsset(texture, fontAsset);</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>            <span class="comment">// Initialize FontEngine</span></div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>            FontEngine.InitializeFontEngine();</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span> </div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>            <span class="comment">// Load Font Face</span></div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>            <span class="keywordflow">if</span> (FontEngine.LoadFontFace(sourceFont, 90) != FontEngineError.Success)</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>            {</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>                Debug.LogWarning(<span class="stringliteral">&quot;Unable to load font face for [&quot;</span> + sourceFont.name + <span class="stringliteral">&quot;]. Make sure \&quot;Include Font Data\&quot; is enabled in the Font Import Settings.&quot;</span>, sourceFont);</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>            }</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span> </div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>            <span class="comment">// Create new Font Asset</span></div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>            <a class="code hl_class" href="../../d7/d7e/class_t_m_pro_1_1_t_m_p___font_asset.html">TMP_FontAsset</a> fontAsset = ScriptableObject.CreateInstance&lt;<a class="code hl_class" href="../../d7/d7e/class_t_m_pro_1_1_t_m_p___font_asset.html">TMP_FontAsset</a>&gt;();</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>            AssetDatabase.CreateAsset(fontAsset, newAssetFilePathWithName);</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span> </div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>            fontAsset.<a class="code hl_property" href="../../d7/d7e/class_t_m_pro_1_1_t_m_p___font_asset.html#abd8857b27602339ef52ee928df174447">version</a> = <span class="stringliteral">&quot;1.1.0&quot;</span>;</div>
 <div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span> </div>
-<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>            <span class="comment">// Add free rectangle of the size of the texture.</span></div>
-<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>            <span class="keywordtype">int</span> packingModifier = ((GlyphRasterModes)fontAsset.atlasRenderMode &amp; GlyphRasterModes.RASTER_MODE_BITMAP) == GlyphRasterModes.RASTER_MODE_BITMAP ? 0 : 1;</div>
-<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>            fontAsset.<a class="code hl_property" href="../../d7/d7e/class_t_m_pro_1_1_t_m_p___font_asset.html#ad047e576465483f016abd2e8372b5649">freeGlyphRects</a> = <span class="keyword">new</span> List&lt;GlyphRect&gt;() { <span class="keyword">new</span> GlyphRect(0, 0, atlasWidth - packingModifier, atlasHeight - packingModifier) };</div>
-<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>            fontAsset.<a class="code hl_property" href="../../d7/d7e/class_t_m_pro_1_1_t_m_p___font_asset.html#a30be476482dedab56f42e34e190b9297">usedGlyphRects</a> = <span class="keyword">new</span> List&lt;GlyphRect&gt;();</div>
-<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span> </div>
-<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>            <span class="comment">// Create new Material and Add it as Sub-Asset</span></div>
-<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>            Shader default_Shader = Shader.Find(<span class="stringliteral">&quot;TextMeshPro/Distance Field&quot;</span>);</div>
-<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>            Material tmp_material = <span class="keyword">new</span> Material(default_Shader);</div>
-<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span> </div>
-<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>            tmp_material.name = texture.name + <span class="stringliteral">&quot; Material&quot;</span>;</div>
-<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>            tmp_material.SetTexture(<a class="code hl_class" href="../../d0/d4a/class_t_m_pro_1_1_shader_utilities.html">ShaderUtilities</a>.ID_MainTex, texture);</div>
-<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>            tmp_material.SetFloat(<a class="code hl_class" href="../../d0/d4a/class_t_m_pro_1_1_shader_utilities.html">ShaderUtilities</a>.ID_TextureWidth, atlasWidth);</div>
-<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>            tmp_material.SetFloat(<a class="code hl_class" href="../../d0/d4a/class_t_m_pro_1_1_shader_utilities.html">ShaderUtilities</a>.ID_TextureHeight, atlasHeight);</div>
-<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span> </div>
-<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>            tmp_material.SetFloat(<a class="code hl_class" href="../../d0/d4a/class_t_m_pro_1_1_shader_utilities.html">ShaderUtilities</a>.ID_GradientScale, atlasPadding + packingModifier);</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>            fontAsset.<a class="code hl_property" href="../../d7/d7e/class_t_m_pro_1_1_t_m_p___font_asset.html#a42eafee651621d6645ea8c424faa2f1a">faceInfo</a> = FontEngine.GetFaceInfo();</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span> </div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>            <span class="comment">// Set font reference and GUID</span></div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>            fontAsset.<a class="code hl_variable" href="../../d7/d7e/class_t_m_pro_1_1_t_m_p___font_asset.html#a93669d6db74053d1c94b3b3313c92737">m_SourceFontFileGUID</a> = AssetDatabase.AssetPathToGUID(sourceFontFilePath);</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>            fontAsset.m_SourceFontFile_EditorRef = sourceFont;</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>            fontAsset.atlasPopulationMode = AtlasPopulationMode.Dynamic;</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span> </div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>            <span class="comment">// Default atlas resolution is 1024 x 1024.</span></div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>            <span class="keywordtype">int</span> atlasWidth = fontAsset.<a class="code hl_property" href="../../d7/d7e/class_t_m_pro_1_1_t_m_p___font_asset.html#a712350fcdd17a12e79ecc49924c53d83">atlasWidth</a> = 1024;</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>            <span class="keywordtype">int</span> atlasHeight = fontAsset.<a class="code hl_property" href="../../d7/d7e/class_t_m_pro_1_1_t_m_p___font_asset.html#aa8cc3b0d4ef6c8f6db402828c82aa439">atlasHeight</a> = 1024;</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>            <span class="keywordtype">int</span> atlasPadding = fontAsset.<a class="code hl_property" href="../../d7/d7e/class_t_m_pro_1_1_t_m_p___font_asset.html#a10ea3cba57114687428dcaf11aa8416d">atlasPadding</a> = 9;</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>            fontAsset.atlasRenderMode = GlyphRenderMode.SDFAA;</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span> </div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>            <span class="comment">// Initialize array for the font atlas textures.</span></div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>            fontAsset.<a class="code hl_property" href="../../d7/d7e/class_t_m_pro_1_1_t_m_p___font_asset.html#ac59bb522cd9a07608104b362e94509e3">atlasTextures</a> = <span class="keyword">new</span> Texture2D[1];</div>
 <div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span> </div>
-<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>            tmp_material.SetFloat(<a class="code hl_class" href="../../d0/d4a/class_t_m_pro_1_1_shader_utilities.html">ShaderUtilities</a>.ID_WeightNormal, fontAsset.<a class="code hl_variable" href="../../d7/d7e/class_t_m_pro_1_1_t_m_p___font_asset.html#a5e537de3b95199926e373e61b27fc197">normalStyle</a>);</div>
-<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>            tmp_material.SetFloat(<a class="code hl_class" href="../../d0/d4a/class_t_m_pro_1_1_shader_utilities.html">ShaderUtilities</a>.ID_WeightBold, fontAsset.<a class="code hl_variable" href="../../d7/d7e/class_t_m_pro_1_1_t_m_p___font_asset.html#a16dbe5f4d6f79766b9cd9745c94bbc9c">boldStyle</a>);</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>            <span class="comment">// Create atlas texture of size zero.</span></div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>            Texture2D texture = <span class="keyword">new</span> Texture2D(0, 0, TextureFormat.Alpha8, <span class="keyword">false</span>);</div>
 <div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span> </div>
-<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>            fontAsset.<a class="code hl_variable" href="../../df/dd5/class_t_m_pro_1_1_t_m_p___asset.html#a8dcd405969e8c3aaa441c0fe3b0b6eaa">material</a> = tmp_material;</div>
-<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span> </div>
-<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>            AssetDatabase.AddObjectToAsset(tmp_material, fontAsset);</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>            texture.name = assetName + <span class="stringliteral">&quot; Atlas&quot;</span>;</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>            fontAsset.<a class="code hl_property" href="../../d7/d7e/class_t_m_pro_1_1_t_m_p___font_asset.html#ac59bb522cd9a07608104b362e94509e3">atlasTextures</a>[0] = texture;</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>            AssetDatabase.AddObjectToAsset(texture, fontAsset);</div>
 <div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span> </div>
-<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>            <span class="comment">// Add Font Asset Creation Settings</span></div>
-<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>            fontAsset.<a class="code hl_property" href="../../d7/d7e/class_t_m_pro_1_1_t_m_p___font_asset.html#a5add1fb1c5ac1afb72c1f6c5b64f9d8a">creationSettings</a> = <span class="keyword">new</span> <a class="code hl_struct" href="../../d1/d21/struct_t_m_pro_1_1_font_asset_creation_settings.html">FontAssetCreationSettings</a>(fontAsset.<a class="code hl_variable" href="../../d7/d7e/class_t_m_pro_1_1_t_m_p___font_asset.html#a93669d6db74053d1c94b3b3313c92737">m_SourceFontFileGUID</a>, fontAsset.<a class="code hl_property" href="../../d7/d7e/class_t_m_pro_1_1_t_m_p___font_asset.html#a42eafee651621d6645ea8c424faa2f1a">faceInfo</a>.pointSize, 0, atlasPadding, 0, 1024, 1024, 7, <span class="keywordtype">string</span>.Empty, (<span class="keywordtype">int</span>)GlyphRenderMode.SDFAA);</div>
-<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span> </div>
-<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>            <span class="comment">// Not sure if this is still necessary in newer versions of Unity.</span></div>
-<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>            EditorUtility.SetDirty(fontAsset);</div>
-<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span> </div>
-<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>            AssetDatabase.SaveAssets();</div>
-<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>        }</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>            <span class="comment">// Add free rectangle of the size of the texture.</span></div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>            <span class="keywordtype">int</span> packingModifier = ((GlyphRasterModes)fontAsset.atlasRenderMode &amp; GlyphRasterModes.RASTER_MODE_BITMAP) == GlyphRasterModes.RASTER_MODE_BITMAP ? 0 : 1;</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>            fontAsset.<a class="code hl_property" href="../../d7/d7e/class_t_m_pro_1_1_t_m_p___font_asset.html#ad047e576465483f016abd2e8372b5649">freeGlyphRects</a> = <span class="keyword">new</span> List&lt;GlyphRect&gt;() { <span class="keyword">new</span> GlyphRect(0, 0, atlasWidth - packingModifier, atlasHeight - packingModifier) };</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>            fontAsset.<a class="code hl_property" href="../../d7/d7e/class_t_m_pro_1_1_t_m_p___font_asset.html#a30be476482dedab56f42e34e190b9297">usedGlyphRects</a> = <span class="keyword">new</span> List&lt;GlyphRect&gt;();</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span> </div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>            <span class="comment">// Create new Material and Add it as Sub-Asset</span></div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>            Shader default_Shader = Shader.Find(<span class="stringliteral">&quot;TextMeshPro/Distance Field&quot;</span>);</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>            Material tmp_material = <span class="keyword">new</span> Material(default_Shader);</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span> </div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>            tmp_material.name = texture.name + <span class="stringliteral">&quot; Material&quot;</span>;</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>            tmp_material.SetTexture(<a class="code hl_class" href="../../d0/d4a/class_t_m_pro_1_1_shader_utilities.html">ShaderUtilities</a>.ID_MainTex, texture);</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>            tmp_material.SetFloat(<a class="code hl_class" href="../../d0/d4a/class_t_m_pro_1_1_shader_utilities.html">ShaderUtilities</a>.ID_TextureWidth, atlasWidth);</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>            tmp_material.SetFloat(<a class="code hl_class" href="../../d0/d4a/class_t_m_pro_1_1_shader_utilities.html">ShaderUtilities</a>.ID_TextureHeight, atlasHeight);</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span> </div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>            tmp_material.SetFloat(<a class="code hl_class" href="../../d0/d4a/class_t_m_pro_1_1_shader_utilities.html">ShaderUtilities</a>.ID_GradientScale, atlasPadding + packingModifier);</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span> </div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>            tmp_material.SetFloat(<a class="code hl_class" href="../../d0/d4a/class_t_m_pro_1_1_shader_utilities.html">ShaderUtilities</a>.ID_WeightNormal, fontAsset.<a class="code hl_variable" href="../../d7/d7e/class_t_m_pro_1_1_t_m_p___font_asset.html#a5e537de3b95199926e373e61b27fc197">normalStyle</a>);</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>            tmp_material.SetFloat(<a class="code hl_class" href="../../d0/d4a/class_t_m_pro_1_1_shader_utilities.html">ShaderUtilities</a>.ID_WeightBold, fontAsset.<a class="code hl_variable" href="../../d7/d7e/class_t_m_pro_1_1_t_m_p___font_asset.html#a16dbe5f4d6f79766b9cd9745c94bbc9c">boldStyle</a>);</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span> </div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>            fontAsset.<a class="code hl_variable" href="../../df/dd5/class_t_m_pro_1_1_t_m_p___asset.html#a8dcd405969e8c3aaa441c0fe3b0b6eaa">material</a> = tmp_material;</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span> </div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>            AssetDatabase.AddObjectToAsset(tmp_material, fontAsset);</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span> </div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>            <span class="comment">// Add Font Asset Creation Settings</span></div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>            fontAsset.<a class="code hl_property" href="../../d7/d7e/class_t_m_pro_1_1_t_m_p___font_asset.html#a5add1fb1c5ac1afb72c1f6c5b64f9d8a">creationSettings</a> = <span class="keyword">new</span> <a class="code hl_struct" href="../../d1/d21/struct_t_m_pro_1_1_font_asset_creation_settings.html">FontAssetCreationSettings</a>(fontAsset.<a class="code hl_variable" href="../../d7/d7e/class_t_m_pro_1_1_t_m_p___font_asset.html#a93669d6db74053d1c94b3b3313c92737">m_SourceFontFileGUID</a>, fontAsset.<a class="code hl_property" href="../../d7/d7e/class_t_m_pro_1_1_t_m_p___font_asset.html#a42eafee651621d6645ea8c424faa2f1a">faceInfo</a>.pointSize, 0, atlasPadding, 0, 1024, 1024, 7, <span class="keywordtype">string</span>.Empty, (<span class="keywordtype">int</span>)GlyphRenderMode.SDFAA);</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span> </div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>            <span class="comment">// Not sure if this is still necessary in newer versions of Unity.</span></div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>            EditorUtility.SetDirty(fontAsset);</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span> </div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>            AssetDatabase.SaveAssets();</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>        }</div>
 <div class="ttc" id="aclass_t_m_pro_1_1_shader_utilities_html"><div class="ttname"><a href="../../d0/d4a/class_t_m_pro_1_1_shader_utilities.html">TMPro.ShaderUtilities</a></div><div class="ttdef"><b>Definition:</b> TMP_ShaderUtilities.cs:9</div></div>
 <div class="ttc" id="aclass_t_m_pro_1_1_t_m_p___asset_html_a8dcd405969e8c3aaa441c0fe3b0b6eaa"><div class="ttname"><a href="../../df/dd5/class_t_m_pro_1_1_t_m_p___asset.html#a8dcd405969e8c3aaa441c0fe3b0b6eaa">TMPro.TMP_Asset.material</a></div><div class="ttdeci">Material material</div><div class="ttdoc">The material used by this asset.</div><div class="ttdef"><b>Definition:</b> TMP_Asset.cs:34</div></div>
 <div class="ttc" id="aclass_t_m_pro_1_1_t_m_p___font_asset_html"><div class="ttname"><a href="../../d7/d7e/class_t_m_pro_1_1_t_m_p___font_asset.html">TMPro.TMP_FontAsset</a></div><div class="ttdef"><b>Definition:</b> TMP_FontAsset.cs:26</div></div>
-<div class="ttc" id="aclass_t_m_pro_1_1_t_m_p___font_asset_html_a10ea3cba57114687428dcaf11aa8416d"><div class="ttname"><a href="../../d7/d7e/class_t_m_pro_1_1_t_m_p___font_asset.html#a10ea3cba57114687428dcaf11aa8416d">TMPro.TMP_FontAsset.atlasPadding</a></div><div class="ttdeci">int atlasPadding</div><div class="ttdoc">The padding used between glyphs contained in the atlas texture(s) used by this font asset.</div><div class="ttdef"><b>Definition:</b> TMP_FontAsset.cs:296</div></div>
-<div class="ttc" id="aclass_t_m_pro_1_1_t_m_p___font_asset_html_a16dbe5f4d6f79766b9cd9745c94bbc9c"><div class="ttname"><a href="../../d7/d7e/class_t_m_pro_1_1_t_m_p___font_asset.html#a16dbe5f4d6f79766b9cd9745c94bbc9c">TMPro.TMP_FontAsset.boldStyle</a></div><div class="ttdeci">float boldStyle</div><div class="ttdoc">Defines the dilation of the text when using bold style.</div><div class="ttdef"><b>Definition:</b> TMP_FontAsset.cs:391</div></div>
-<div class="ttc" id="aclass_t_m_pro_1_1_t_m_p___font_asset_html_a30be476482dedab56f42e34e190b9297"><div class="ttname"><a href="../../d7/d7e/class_t_m_pro_1_1_t_m_p___font_asset.html#a30be476482dedab56f42e34e190b9297">TMPro.TMP_FontAsset.usedGlyphRects</a></div><div class="ttdeci">List&lt; GlyphRect &gt; usedGlyphRects</div><div class="ttdoc">List of spaces occupied by glyphs in a given texture.</div><div class="ttdef"><b>Definition:</b> TMP_FontAsset.cs:233</div></div>
+<div class="ttc" id="aclass_t_m_pro_1_1_t_m_p___font_asset_html_a10ea3cba57114687428dcaf11aa8416d"><div class="ttname"><a href="../../d7/d7e/class_t_m_pro_1_1_t_m_p___font_asset.html#a10ea3cba57114687428dcaf11aa8416d">TMPro.TMP_FontAsset.atlasPadding</a></div><div class="ttdeci">int atlasPadding</div><div class="ttdoc">The padding used between glyphs contained in the atlas texture(s) used by this font asset.</div><div class="ttdef"><b>Definition:</b> TMP_FontAsset.cs:307</div></div>
+<div class="ttc" id="aclass_t_m_pro_1_1_t_m_p___font_asset_html_a16dbe5f4d6f79766b9cd9745c94bbc9c"><div class="ttname"><a href="../../d7/d7e/class_t_m_pro_1_1_t_m_p___font_asset.html#a16dbe5f4d6f79766b9cd9745c94bbc9c">TMPro.TMP_FontAsset.boldStyle</a></div><div class="ttdeci">float boldStyle</div><div class="ttdoc">Defines the dilation of the text when using bold style.</div><div class="ttdef"><b>Definition:</b> TMP_FontAsset.cs:402</div></div>
+<div class="ttc" id="aclass_t_m_pro_1_1_t_m_p___font_asset_html_a30be476482dedab56f42e34e190b9297"><div class="ttname"><a href="../../d7/d7e/class_t_m_pro_1_1_t_m_p___font_asset.html#a30be476482dedab56f42e34e190b9297">TMPro.TMP_FontAsset.usedGlyphRects</a></div><div class="ttdeci">List&lt; GlyphRect &gt; usedGlyphRects</div><div class="ttdoc">List of spaces occupied by glyphs in a given texture.</div><div class="ttdef"><b>Definition:</b> TMP_FontAsset.cs:244</div></div>
 <div class="ttc" id="aclass_t_m_pro_1_1_t_m_p___font_asset_html_a42eafee651621d6645ea8c424faa2f1a"><div class="ttname"><a href="../../d7/d7e/class_t_m_pro_1_1_t_m_p___font_asset.html#a42eafee651621d6645ea8c424faa2f1a">TMPro.TMP_FontAsset.faceInfo</a></div><div class="ttdeci">FaceInfo faceInfo</div><div class="ttdoc">Information about the font's face.</div><div class="ttdef"><b>Definition:</b> TMP_FontAsset.cs:88</div></div>
-<div class="ttc" id="aclass_t_m_pro_1_1_t_m_p___font_asset_html_a5add1fb1c5ac1afb72c1f6c5b64f9d8a"><div class="ttname"><a href="../../d7/d7e/class_t_m_pro_1_1_t_m_p___font_asset.html#a5add1fb1c5ac1afb72c1f6c5b64f9d8a">TMPro.TMP_FontAsset.creationSettings</a></div><div class="ttdeci">FontAssetCreationSettings creationSettings</div><div class="ttdoc">The settings used in the Font Asset Creator when this font asset was created or edited.</div><div class="ttdef"><b>Definition:</b> TMP_FontAsset.cs:350</div></div>
-<div class="ttc" id="aclass_t_m_pro_1_1_t_m_p___font_asset_html_a5e537de3b95199926e373e61b27fc197"><div class="ttname"><a href="../../d7/d7e/class_t_m_pro_1_1_t_m_p___font_asset.html#a5e537de3b95199926e373e61b27fc197">TMPro.TMP_FontAsset.normalStyle</a></div><div class="ttdeci">float normalStyle</div><div class="ttdoc">Defines the dilation of the text when using regular style.</div><div class="ttdef"><b>Definition:</b> TMP_FontAsset.cs:381</div></div>
-<div class="ttc" id="aclass_t_m_pro_1_1_t_m_p___font_asset_html_a712350fcdd17a12e79ecc49924c53d83"><div class="ttname"><a href="../../d7/d7e/class_t_m_pro_1_1_t_m_p___font_asset.html#a712350fcdd17a12e79ecc49924c53d83">TMPro.TMP_FontAsset.atlasWidth</a></div><div class="ttdeci">int atlasWidth</div><div class="ttdoc">The width of the atlas texture(s) used by this font asset.</div><div class="ttdef"><b>Definition:</b> TMP_FontAsset.cs:274</div></div>
+<div class="ttc" id="aclass_t_m_pro_1_1_t_m_p___font_asset_html_a5add1fb1c5ac1afb72c1f6c5b64f9d8a"><div class="ttname"><a href="../../d7/d7e/class_t_m_pro_1_1_t_m_p___font_asset.html#a5add1fb1c5ac1afb72c1f6c5b64f9d8a">TMPro.TMP_FontAsset.creationSettings</a></div><div class="ttdeci">FontAssetCreationSettings creationSettings</div><div class="ttdoc">The settings used in the Font Asset Creator when this font asset was created or edited.</div><div class="ttdef"><b>Definition:</b> TMP_FontAsset.cs:361</div></div>
+<div class="ttc" id="aclass_t_m_pro_1_1_t_m_p___font_asset_html_a5e537de3b95199926e373e61b27fc197"><div class="ttname"><a href="../../d7/d7e/class_t_m_pro_1_1_t_m_p___font_asset.html#a5e537de3b95199926e373e61b27fc197">TMPro.TMP_FontAsset.normalStyle</a></div><div class="ttdeci">float normalStyle</div><div class="ttdoc">Defines the dilation of the text when using regular style.</div><div class="ttdef"><b>Definition:</b> TMP_FontAsset.cs:392</div></div>
+<div class="ttc" id="aclass_t_m_pro_1_1_t_m_p___font_asset_html_a712350fcdd17a12e79ecc49924c53d83"><div class="ttname"><a href="../../d7/d7e/class_t_m_pro_1_1_t_m_p___font_asset.html#a712350fcdd17a12e79ecc49924c53d83">TMPro.TMP_FontAsset.atlasWidth</a></div><div class="ttdeci">int atlasWidth</div><div class="ttdoc">The width of the atlas texture(s) used by this font asset.</div><div class="ttdef"><b>Definition:</b> TMP_FontAsset.cs:285</div></div>
 <div class="ttc" id="aclass_t_m_pro_1_1_t_m_p___font_asset_html_a93669d6db74053d1c94b3b3313c92737"><div class="ttname"><a href="../../d7/d7e/class_t_m_pro_1_1_t_m_p___font_asset.html#a93669d6db74053d1c94b3b3313c92737">TMPro.TMP_FontAsset.m_SourceFontFileGUID</a></div><div class="ttdeci">string m_SourceFontFileGUID</div><div class="ttdoc">This field is set when the font asset is first created.</div><div class="ttdef"><b>Definition:</b> TMP_FontAsset.cs:43</div></div>
-<div class="ttc" id="aclass_t_m_pro_1_1_t_m_p___font_asset_html_aa8cc3b0d4ef6c8f6db402828c82aa439"><div class="ttname"><a href="../../d7/d7e/class_t_m_pro_1_1_t_m_p___font_asset.html#aa8cc3b0d4ef6c8f6db402828c82aa439">TMPro.TMP_FontAsset.atlasHeight</a></div><div class="ttdeci">int atlasHeight</div><div class="ttdoc">The height of the atlas texture(s) used by this font asset.</div><div class="ttdef"><b>Definition:</b> TMP_FontAsset.cs:285</div></div>
+<div class="ttc" id="aclass_t_m_pro_1_1_t_m_p___font_asset_html_aa8cc3b0d4ef6c8f6db402828c82aa439"><div class="ttname"><a href="../../d7/d7e/class_t_m_pro_1_1_t_m_p___font_asset.html#aa8cc3b0d4ef6c8f6db402828c82aa439">TMPro.TMP_FontAsset.atlasHeight</a></div><div class="ttdeci">int atlasHeight</div><div class="ttdoc">The height of the atlas texture(s) used by this font asset.</div><div class="ttdef"><b>Definition:</b> TMP_FontAsset.cs:296</div></div>
 <div class="ttc" id="aclass_t_m_pro_1_1_t_m_p___font_asset_html_abd8857b27602339ef52ee928df174447"><div class="ttname"><a href="../../d7/d7e/class_t_m_pro_1_1_t_m_p___font_asset.html#abd8857b27602339ef52ee928df174447">TMPro.TMP_FontAsset.version</a></div><div class="ttdeci">string version</div><div class="ttdoc">The version of the font asset class. Version 1.1.0 adds support for the new TextCore....</div><div class="ttdef"><b>Definition:</b> TMP_FontAsset.cs:32</div></div>
 <div class="ttc" id="aclass_t_m_pro_1_1_t_m_p___font_asset_html_ac59bb522cd9a07608104b362e94509e3"><div class="ttname"><a href="../../d7/d7e/class_t_m_pro_1_1_t_m_p___font_asset.html#ac59bb522cd9a07608104b362e94509e3">TMPro.TMP_FontAsset.atlasTextures</a></div><div class="ttdeci">Texture2D[] atlasTextures</div><div class="ttdoc">Array of atlas textures that contain the glyphs used by this font asset.</div><div class="ttdef"><b>Definition:</b> TMP_FontAsset.cs:184</div></div>
-<div class="ttc" id="aclass_t_m_pro_1_1_t_m_p___font_asset_html_ad047e576465483f016abd2e8372b5649"><div class="ttname"><a href="../../d7/d7e/class_t_m_pro_1_1_t_m_p___font_asset.html#ad047e576465483f016abd2e8372b5649">TMPro.TMP_FontAsset.freeGlyphRects</a></div><div class="ttdeci">List&lt; GlyphRect &gt; freeGlyphRects</div><div class="ttdoc">List of spaces available in a given texture to add new glyphs.</div><div class="ttdef"><b>Definition:</b> TMP_FontAsset.cs:244</div></div>
+<div class="ttc" id="aclass_t_m_pro_1_1_t_m_p___font_asset_html_ad047e576465483f016abd2e8372b5649"><div class="ttname"><a href="../../d7/d7e/class_t_m_pro_1_1_t_m_p___font_asset.html#ad047e576465483f016abd2e8372b5649">TMPro.TMP_FontAsset.freeGlyphRects</a></div><div class="ttdeci">List&lt; GlyphRect &gt; freeGlyphRects</div><div class="ttdoc">List of spaces available in a given texture to add new glyphs.</div><div class="ttdef"><b>Definition:</b> TMP_FontAsset.cs:255</div></div>
 <div class="ttc" id="astruct_t_m_pro_1_1_font_asset_creation_settings_html"><div class="ttname"><a href="../../d1/d21/struct_t_m_pro_1_1_font_asset_creation_settings.html">TMPro.FontAssetCreationSettings</a></div><div class="ttdef"><b>Definition:</b> TMP_FontAssetCommon.cs:81</div></div>
 </div><!-- fragment -->
 </div>
@@ -244,35 +290,44 @@ Static Public Member Functions</h2></td></tr>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>                <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>            }</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>            <a class="code hl_class" href="../../d7/d7e/class_t_m_pro_1_1_t_m_p___font_asset.html">TMP_FontAsset</a> sourceFontAsset = (<a class="code hl_class" href="../../d7/d7e/class_t_m_pro_1_1_t_m_p___font_asset.html">TMP_FontAsset</a>)target;</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>            <span class="keywordtype">string</span> sourceFontFilePath = AssetDatabase.GetAssetPath(target);</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>            <span class="keywordtype">string</span> folderPath = Path.GetDirectoryName(sourceFontFilePath);</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            <span class="keywordtype">string</span> assetName = Path.GetFileNameWithoutExtension(sourceFontFilePath);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>            <span class="comment">// Make sure TMP Essential Resources have been imported in the user project.</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="../../d6/d7d/class_t_m_pro_1_1_t_m_p___settings.html">TMP_Settings</a>.<a class="code hl_property" href="../../d6/d7d/class_t_m_pro_1_1_t_m_p___settings.html#a27bd5ea027ced6add42d15cc09d2925b">instance</a> == <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>            {</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>                Debug.Log(<span class="stringliteral">&quot;Unable to create font asset. Please import the TMP Essential Resources.&quot;</span>);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            }</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>            <span class="keywordtype">string</span> newAssetFilePathWithName = AssetDatabase.GenerateUniqueAssetPath(folderPath + <span class="stringliteral">&quot;/&quot;</span> + assetName + <span class="stringliteral">&quot; - Variant.asset&quot;</span>);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>            <a class="code hl_class" href="../../d7/d7e/class_t_m_pro_1_1_t_m_p___font_asset.html">TMP_FontAsset</a> sourceFontAsset = (<a class="code hl_class" href="../../d7/d7e/class_t_m_pro_1_1_t_m_p___font_asset.html">TMP_FontAsset</a>)target;</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>            <span class="comment">// Set Texture and Material reference to the source font asset.</span></div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            <a class="code hl_class" href="../../d7/d7e/class_t_m_pro_1_1_t_m_p___font_asset.html">TMP_FontAsset</a> fontAsset = ScriptableObject.Instantiate&lt;<a class="code hl_class" href="../../d7/d7e/class_t_m_pro_1_1_t_m_p___font_asset.html">TMP_FontAsset</a>&gt;(sourceFontAsset);</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            AssetDatabase.CreateAsset(fontAsset, newAssetFilePathWithName);</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            fontAsset.atlasPopulationMode = AtlasPopulationMode.Static;</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            <span class="comment">// Initialize array for the font atlas textures.</span></div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            fontAsset.<a class="code hl_property" href="../../d7/d7e/class_t_m_pro_1_1_t_m_p___font_asset.html#ac59bb522cd9a07608104b362e94509e3">atlasTextures</a> = sourceFontAsset.<a class="code hl_property" href="../../d7/d7e/class_t_m_pro_1_1_t_m_p___font_asset.html#ac59bb522cd9a07608104b362e94509e3">atlasTextures</a>;</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>            fontAsset.<a class="code hl_variable" href="../../df/dd5/class_t_m_pro_1_1_t_m_p___asset.html#a8dcd405969e8c3aaa441c0fe3b0b6eaa">material</a> = sourceFontAsset.<a class="code hl_variable" href="../../df/dd5/class_t_m_pro_1_1_t_m_p___asset.html#a8dcd405969e8c3aaa441c0fe3b0b6eaa">material</a>;</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            <span class="comment">// Not sure if this is still necessary in newer versions of Unity.</span></div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            EditorUtility.SetDirty(fontAsset);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>            <span class="keywordtype">string</span> sourceFontFilePath = AssetDatabase.GetAssetPath(target);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            <span class="keywordtype">string</span> folderPath = Path.GetDirectoryName(sourceFontFilePath);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            <span class="keywordtype">string</span> assetName = Path.GetFileNameWithoutExtension(sourceFontFilePath);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            <span class="keywordtype">string</span> newAssetFilePathWithName = AssetDatabase.GenerateUniqueAssetPath(folderPath + <span class="stringliteral">&quot;/&quot;</span> + assetName + <span class="stringliteral">&quot; - Variant.asset&quot;</span>);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            <span class="comment">// Set Texture and Material reference to the source font asset.</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>            <a class="code hl_class" href="../../d7/d7e/class_t_m_pro_1_1_t_m_p___font_asset.html">TMP_FontAsset</a> fontAsset = ScriptableObject.Instantiate&lt;<a class="code hl_class" href="../../d7/d7e/class_t_m_pro_1_1_t_m_p___font_asset.html">TMP_FontAsset</a>&gt;(sourceFontAsset);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            AssetDatabase.CreateAsset(fontAsset, newAssetFilePathWithName);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            fontAsset.atlasPopulationMode = AtlasPopulationMode.Static;</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            AssetDatabase.SaveAssets();</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        }</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            <span class="comment">// Initialize array for the font atlas textures.</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            fontAsset.<a class="code hl_property" href="../../d7/d7e/class_t_m_pro_1_1_t_m_p___font_asset.html#ac59bb522cd9a07608104b362e94509e3">atlasTextures</a> = sourceFontAsset.<a class="code hl_property" href="../../d7/d7e/class_t_m_pro_1_1_t_m_p___font_asset.html#ac59bb522cd9a07608104b362e94509e3">atlasTextures</a>;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>            fontAsset.<a class="code hl_variable" href="../../df/dd5/class_t_m_pro_1_1_t_m_p___asset.html#a8dcd405969e8c3aaa441c0fe3b0b6eaa">material</a> = sourceFontAsset.<a class="code hl_variable" href="../../df/dd5/class_t_m_pro_1_1_t_m_p___asset.html#a8dcd405969e8c3aaa441c0fe3b0b6eaa">material</a>;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            <span class="comment">// Not sure if this is still necessary in newer versions of Unity.</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            EditorUtility.SetDirty(fontAsset);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            AssetDatabase.SaveAssets();</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        }</div>
+<div class="ttc" id="aclass_t_m_pro_1_1_t_m_p___settings_html"><div class="ttname"><a href="../../d6/d7d/class_t_m_pro_1_1_t_m_p___settings.html">TMPro.TMP_Settings</a></div><div class="ttdoc">Scaling options for the sprites</div><div class="ttdef"><b>Definition:</b> TMP_Settings.cs:21</div></div>
+<div class="ttc" id="aclass_t_m_pro_1_1_t_m_p___settings_html_a27bd5ea027ced6add42d15cc09d2925b"><div class="ttname"><a href="../../d6/d7d/class_t_m_pro_1_1_t_m_p___settings.html#a27bd5ea027ced6add42d15cc09d2925b">TMPro.TMP_Settings.instance</a></div><div class="ttdeci">static TMP_Settings instance</div><div class="ttdoc">Get a singleton instance of the settings class.</div><div class="ttdef"><b>Definition:</b> TMP_Settings.cs:385</div></div>
 </div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>F:/GitHub/NullReferenceException/Library/PackageCache/com.unity.textmeshpro@3.0.1/Scripts/Editor/TMP_FontAsset_CreationMenu.cs</li>
+<li>F:/GitHub/NullReferenceException/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Editor/TMP_FontAsset_CreationMenu.cs</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

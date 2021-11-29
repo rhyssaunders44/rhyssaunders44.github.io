@@ -68,6 +68,7 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pac-static-methods">Static Package Functions</a> &#124;
 <a href="#properties">Properties</a> &#124;
 <a href="#pri-static-methods">Static Private Member Functions</a> &#124;
 <a href="../../d5/d31/class_t_m_pro_1_1_sorting_layer_helper-members.html">List of all members</a>  </div>
@@ -75,6 +76,13 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pac-static-methods" name="pac-static-methods"></a>
+Static Package Functions</h2></td></tr>
+<tr class="memitem:ae44e9426cc59ea804f896bbc256f2ce0"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dfe/class_t_m_pro_1_1_sorting_layer_helper.html#ae44e9426cc59ea804f896bbc256f2ce0">GetSortingLayerIndexFromValue</a> (int value)</td></tr>
+<tr class="separator:ae44e9426cc59ea804f896bbc256f2ce0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f4ed8c91e40d94f7ca972f66572ae91"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dfe/class_t_m_pro_1_1_sorting_layer_helper.html#a6f4ed8c91e40d94f7ca972f66572ae91">GetSortingLayerIndexFromSortingLayerID</a> (int id)</td></tr>
+<tr class="separator:a6f4ed8c91e40d94f7ca972f66572ae91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="properties" name="properties"></a>
 Properties</h2></td></tr>
 <tr class="memitem:acff2870963e429ed12011925010e8d4c"><td class="memItemLeft" align="right" valign="top">static string[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dfe/class_t_m_pro_1_1_sorting_layer_helper.html#acff2870963e429ed12011925010e8d4c">sortingLayerNames</a><code> [get]</code></td></tr>
@@ -86,6 +94,80 @@ Static Private Member Functions</h2></td></tr>
 <tr class="separator:a353fbd0825a352d99349f4cd18ec809b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a6f4ed8c91e40d94f7ca972f66572ae91" name="a6f4ed8c91e40d94f7ca972f66572ae91"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f4ed8c91e40d94f7ca972f66572ae91">&#9670;&nbsp;</a></span>GetSortingLayerIndexFromSortingLayerID()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int TMPro.SortingLayerHelper.GetSortingLayerIndexFromSortingLayerID </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        {</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            <span class="keywordtype">int</span> layerCount = SortingLayer.layers.Length;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; layerCount; i++)</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            {</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>                <span class="keywordflow">if</span> (<span class="keywordtype">id</span> == SortingLayer.layers[i].id)</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>                    <span class="keywordflow">return</span> i;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            }</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ae44e9426cc59ea804f896bbc256f2ce0" name="ae44e9426cc59ea804f896bbc256f2ce0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae44e9426cc59ea804f896bbc256f2ce0">&#9670;&nbsp;</a></span>GetSortingLayerIndexFromValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int TMPro.SortingLayerHelper.GetSortingLayerIndexFromValue </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        {</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            <span class="keywordtype">int</span> layerCount = SortingLayer.layers.Length;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; layerCount; i++)</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>            {</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>                <span class="keywordflow">if</span> (value == SortingLayer.layers[i].value)</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>                    <span class="keywordflow">return</span> i;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            }</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        }</div>
+</div><!-- fragment -->
+</div>
+</div>
 <a id="a353fbd0825a352d99349f4cd18ec809b" name="a353fbd0825a352d99349f4cd18ec809b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a353fbd0825a352d99349f4cd18ec809b">&#9670;&nbsp;</a></span>GetSortingLayerNames()</h2>
 
@@ -153,7 +235,7 @@ Static Private Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>F:/GitHub/NullReferenceException/Library/PackageCache/com.unity.textmeshpro@3.0.1/Scripts/Editor/TMPro_SortingLayerHelper.cs</li>
+<li>F:/GitHub/NullReferenceException/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Editor/TMPro_SortingLayerHelper.cs</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

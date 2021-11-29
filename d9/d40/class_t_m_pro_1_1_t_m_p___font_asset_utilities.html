@@ -399,29 +399,29 @@ static bool&#160;</td><td class="memItemRight" valign="bottom"><b>k_IsFontEngine
 <div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>                List&lt;TMP_FontAsset&gt; fallbackFontAssets = sourceFontAsset.fallbackFontAssetTable;</div>
 <div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>                <span class="keywordtype">int</span> fallbackCount = fallbackFontAssets.Count;</div>
 <div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span> </div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>                <span class="keywordflow">if</span> (fallbackFontAssets != <span class="keyword">null</span> &amp;&amp; fallbackCount &gt; 0)</div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>                {</div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>                    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; fallbackCount; i++)</div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>                    {</div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>                        TMP_FontAsset temp = fallbackFontAssets[i];</div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span> </div>
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>                        <span class="keywordflow">if</span> (temp == <span class="keyword">null</span>)</div>
-<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>                            <span class="keywordflow">continue</span>;</div>
-<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span> </div>
-<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>                        <span class="keywordtype">int</span> <span class="keywordtype">id</span> = temp.instanceID;</div>
-<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span> </div>
-<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>                        <span class="comment">// Try adding font asset to search list. If already present skip to the next one otherwise check if it contains the requested character.</span></div>
-<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>                        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d9/d40/class_t_m_pro_1_1_t_m_p___font_asset_utilities.html#aceb6c30b14135bc7a40bea9f7744a2d9">k_SearchedAssets</a>.Add(<span class="keywordtype">id</span>) == <span class="keyword">false</span>)</div>
-<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>                            <span class="keywordflow">continue</span>;</div>
-<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span> </div>
-<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>                        <span class="comment">// Add reference to this search query</span></div>
-<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>                        sourceFontAsset.FallbackSearchQueryLookup.Add(<span class="keywordtype">id</span>);</div>
-<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span> </div>
-<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>                        character = <a class="code hl_function" href="../../d9/d40/class_t_m_pro_1_1_t_m_p___font_asset_utilities.html#a22faa12b72e374579a7377572828051d">GetCharacterFromFontAsset_Internal</a>(unicode, temp, <span class="keyword">true</span>, fontStyle, fontWeight, out isAlternativeTypeface);</div>
-<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span> </div>
-<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>                        <span class="keywordflow">if</span> (character != <span class="keyword">null</span>)</div>
-<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>                            <span class="keywordflow">return</span> character;</div>
-<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>                    }</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>                <span class="keywordflow">if</span> (fallbackCount == 0)</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>                    <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span> </div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; fallbackCount; i++)</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>                {</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>                    TMP_FontAsset temp = fallbackFontAssets[i];</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span> </div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>                    <span class="keywordflow">if</span> (temp == <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>                        <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span> </div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>                    <span class="keywordtype">int</span> <span class="keywordtype">id</span> = temp.instanceID;</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span> </div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>                    <span class="comment">// Try adding font asset to search list. If already present skip to the next one otherwise check if it contains the requested character.</span></div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>                    <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d9/d40/class_t_m_pro_1_1_t_m_p___font_asset_utilities.html#aceb6c30b14135bc7a40bea9f7744a2d9">k_SearchedAssets</a>.Add(<span class="keywordtype">id</span>) == <span class="keyword">false</span>)</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>                        <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span> </div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>                    <span class="comment">// Add reference to this search query</span></div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>                    sourceFontAsset.FallbackSearchQueryLookup.Add(<span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span> </div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>                    character = <a class="code hl_function" href="../../d9/d40/class_t_m_pro_1_1_t_m_p___font_asset_utilities.html#a22faa12b72e374579a7377572828051d">GetCharacterFromFontAsset_Internal</a>(unicode, temp, <span class="keyword">true</span>, fontStyle, fontWeight, out isAlternativeTypeface);</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span> </div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>                    <span class="keywordflow">if</span> (character != <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>                        <span class="keywordflow">return</span> character;</div>
 <div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>                }</div>
 <div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>            }</div>
 <div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span> </div>
@@ -770,7 +770,7 @@ static bool&#160;</td><td class="memItemRight" valign="bottom"><b>k_IsFontEngine
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>F:/GitHub/NullReferenceException/Library/PackageCache/com.unity.textmeshpro@3.0.1/Scripts/Runtime/TMP_FontAssetUtilities.cs</li>
+<li>F:/GitHub/NullReferenceException/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMP_FontAssetUtilities.cs</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

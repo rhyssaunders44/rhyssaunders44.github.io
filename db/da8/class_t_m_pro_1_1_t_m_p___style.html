@@ -70,6 +70,7 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pac-methods">Package Functions</a> &#124;
+<a href="#pac-attribs">Package Attributes</a> &#124;
 <a href="#pac-static-attribs">Static Package Attributes</a> &#124;
 <a href="#properties">Properties</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
@@ -89,6 +90,15 @@ Package Functions</h2></td></tr>
 <tr class="memitem:a9ed503ec75b3805d20961fa7a581274b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/da8/class_t_m_pro_1_1_t_m_p___style.html#a9ed503ec75b3805d20961fa7a581274b">TMP_Style</a> (string styleName, string <a class="el" href="../../db/da8/class_t_m_pro_1_1_t_m_p___style.html#a9ad5821b0ddc0a5e6c0e82da84785afb">styleOpeningDefinition</a>, string <a class="el" href="../../db/da8/class_t_m_pro_1_1_t_m_p___style.html#a42965f3ab3ced3820d6b749d6ce918e2">styleClosingDefinition</a>)</td></tr>
 <tr class="memdesc:a9ed503ec75b3805d20961fa7a581274b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor  <a href="../../db/da8/class_t_m_pro_1_1_t_m_p___style.html#a9ed503ec75b3805d20961fa7a581274b">More...</a><br /></td></tr>
 <tr class="separator:a9ed503ec75b3805d20961fa7a581274b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pac-attribs" name="pac-attribs"></a>
+Package Attributes</h2></td></tr>
+<tr class="memitem:a8214d6e47bc50ce6215f9417734e5f6c"><td class="memItemLeft" align="right" valign="top"><a id="a8214d6e47bc50ce6215f9417734e5f6c" name="a8214d6e47bc50ce6215f9417734e5f6c"></a>
+uint[]&#160;</td><td class="memItemRight" valign="bottom"><b>m_OpeningTagUnicodeArray</b></td></tr>
+<tr class="separator:a8214d6e47bc50ce6215f9417734e5f6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4005d1bf03b2541cf91a2bc1db9b1905"><td class="memItemLeft" align="right" valign="top"><a id="a4005d1bf03b2541cf91a2bc1db9b1905" name="a4005d1bf03b2541cf91a2bc1db9b1905"></a>
+uint[]&#160;</td><td class="memItemRight" valign="bottom"><b>m_ClosingTagUnicodeArray</b></td></tr>
+<tr class="separator:a4005d1bf03b2541cf91a2bc1db9b1905"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pac-static-attribs" name="pac-static-attribs"></a>
 Static Package Attributes</h2></td></tr>
@@ -188,16 +198,16 @@ int[]&#160;</td><td class="memItemRight" valign="bottom"><b>m_ClosingTagArray</b
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        {</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>            m_Name = styleName;</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>            m_HashCode = TMP_TextParsingUtilities.GetHashCode(styleName);</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>            m_OpeningDefinition = <a class="code hl_property" href="../../db/da8/class_t_m_pro_1_1_t_m_p___style.html#a9ad5821b0ddc0a5e6c0e82da84785afb">styleOpeningDefinition</a>;</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>            m_ClosingDefinition = <a class="code hl_property" href="../../db/da8/class_t_m_pro_1_1_t_m_p___style.html#a42965f3ab3ced3820d6b749d6ce918e2">styleClosingDefinition</a>;</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>            <a class="code hl_function" href="../../db/da8/class_t_m_pro_1_1_t_m_p___style.html#a45cd2cf30f163d32c1bfa91914852154">RefreshStyle</a>();</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        }</div>
+<div class="fragment"><div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        {</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>            m_Name = styleName;</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>            m_HashCode = TMP_TextParsingUtilities.GetHashCode(styleName);</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>            m_OpeningDefinition = <a class="code hl_property" href="../../db/da8/class_t_m_pro_1_1_t_m_p___style.html#a9ad5821b0ddc0a5e6c0e82da84785afb">styleOpeningDefinition</a>;</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>            m_ClosingDefinition = <a class="code hl_property" href="../../db/da8/class_t_m_pro_1_1_t_m_p___style.html#a42965f3ab3ced3820d6b749d6ce918e2">styleClosingDefinition</a>;</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>            <a class="code hl_function" href="../../db/da8/class_t_m_pro_1_1_t_m_p___style.html#a45cd2cf30f163d32c1bfa91914852154">RefreshStyle</a>();</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        }</div>
 <div class="ttc" id="aclass_t_m_pro_1_1_t_m_p___style_html_a42965f3ab3ced3820d6b749d6ce918e2"><div class="ttname"><a href="../../db/da8/class_t_m_pro_1_1_t_m_p___style.html#a42965f3ab3ced3820d6b749d6ce918e2">TMPro.TMP_Style.styleClosingDefinition</a></div><div class="ttdeci">string styleClosingDefinition</div><div class="ttdoc">The closing definition of the style. ex.  .</div><div class="ttdef"><b>Definition:</b> TMP_Style.cs:47</div></div>
-<div class="ttc" id="aclass_t_m_pro_1_1_t_m_p___style_html_a45cd2cf30f163d32c1bfa91914852154"><div class="ttname"><a href="../../db/da8/class_t_m_pro_1_1_t_m_p___style.html#a45cd2cf30f163d32c1bfa91914852154">TMPro.TMP_Style.RefreshStyle</a></div><div class="ttdeci">void RefreshStyle()</div><div class="ttdoc">Function to update the content of the int[] resulting from changes to OpeningDefinition &amp; ClosingDefi...</div><div class="ttdef"><b>Definition:</b> TMP_Style.cs:98</div></div>
+<div class="ttc" id="aclass_t_m_pro_1_1_t_m_p___style_html_a45cd2cf30f163d32c1bfa91914852154"><div class="ttname"><a href="../../db/da8/class_t_m_pro_1_1_t_m_p___style.html#a45cd2cf30f163d32c1bfa91914852154">TMPro.TMP_Style.RefreshStyle</a></div><div class="ttdeci">void RefreshStyle()</div><div class="ttdoc">Function to update the content of the int[] resulting from changes to OpeningDefinition &amp; ClosingDefi...</div><div class="ttdef"><b>Definition:</b> TMP_Style.cs:103</div></div>
 <div class="ttc" id="aclass_t_m_pro_1_1_t_m_p___style_html_a9ad5821b0ddc0a5e6c0e82da84785afb"><div class="ttname"><a href="../../db/da8/class_t_m_pro_1_1_t_m_p___style.html#a9ad5821b0ddc0a5e6c0e82da84785afb">TMPro.TMP_Style.styleOpeningDefinition</a></div><div class="ttdeci">string styleOpeningDefinition</div><div class="ttdoc">The initial definition of the style. ex.  .</div><div class="ttdef"><b>Definition:</b> TMP_Style.cs:41</div></div>
 </div><!-- fragment -->
 </div>
@@ -219,17 +229,29 @@ int[]&#160;</td><td class="memItemRight" valign="bottom"><b>m_ClosingTagArray</b
 </div><div class="memdoc">
 
 <p>Function to update the content of the int[] resulting from changes to OpeningDefinition &amp; ClosingDefinition. </p>
-<div class="fragment"><div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        {</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>            m_HashCode = TMP_TextParsingUtilities.GetHashCode(m_Name);</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>            </div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>            m_OpeningTagArray = <span class="keyword">new</span> <span class="keywordtype">int</span>[m_OpeningDefinition.Length];</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; m_OpeningDefinition.Length; i++)</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>                m_OpeningTagArray[i] = m_OpeningDefinition[i];</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>            m_ClosingTagArray = <span class="keyword">new</span> <span class="keywordtype">int</span>[m_ClosingDefinition.Length];</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; m_ClosingDefinition.Length; i++)</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>                m_ClosingTagArray[i] = m_ClosingDefinition[i];</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        }</div>
+<div class="fragment"><div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        {</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>            m_HashCode = TMP_TextParsingUtilities.GetHashCode(m_Name);</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>            <span class="keywordtype">int</span> s1 = m_OpeningDefinition.Length;</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>            m_OpeningTagArray = <span class="keyword">new</span> <span class="keywordtype">int</span>[s1];</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>            m_OpeningTagUnicodeArray = <span class="keyword">new</span> uint[s1];</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; s1; i++)</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>            {</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>                m_OpeningTagArray[i] = m_OpeningDefinition[i];</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>                m_OpeningTagUnicodeArray[i] = m_OpeningDefinition[i];</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>            }</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>            <span class="keywordtype">int</span> s2 = m_ClosingDefinition.Length;</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>            m_ClosingTagArray = <span class="keyword">new</span> <span class="keywordtype">int</span>[s2];</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>            m_ClosingTagUnicodeArray = <span class="keyword">new</span> uint[s2];</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; s2; i++)</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>            {</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>                m_ClosingTagArray[i] = m_ClosingDefinition[i];</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>                m_ClosingTagUnicodeArray[i] = m_ClosingDefinition[i];</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>            }</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -312,7 +334,7 @@ int[]&#160;</td><td class="memItemRight" valign="bottom"><b>m_ClosingTagArray</b
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>                <span class="keywordflow">return</span> k_NormalStyle;</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>            }</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        }</div>
-<div class="ttc" id="aclass_t_m_pro_1_1_t_m_p___style_html_a9ed503ec75b3805d20961fa7a581274b"><div class="ttname"><a href="../../db/da8/class_t_m_pro_1_1_t_m_p___style.html#a9ed503ec75b3805d20961fa7a581274b">TMPro.TMP_Style.TMP_Style</a></div><div class="ttdeci">TMP_Style(string styleName, string styleOpeningDefinition, string styleClosingDefinition)</div><div class="ttdoc">Constructor</div><div class="ttdef"><b>Definition:</b> TMP_Style.cs:84</div></div>
+<div class="ttc" id="aclass_t_m_pro_1_1_t_m_p___style_html_a9ed503ec75b3805d20961fa7a581274b"><div class="ttname"><a href="../../db/da8/class_t_m_pro_1_1_t_m_p___style.html#a9ed503ec75b3805d20961fa7a581274b">TMPro.TMP_Style.TMP_Style</a></div><div class="ttdeci">TMP_Style(string styleName, string styleOpeningDefinition, string styleClosingDefinition)</div><div class="ttdoc">Constructor</div><div class="ttdef"><b>Definition:</b> TMP_Style.cs:89</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -413,7 +435,7 @@ int[]&#160;</td><td class="memItemRight" valign="bottom"><b>m_ClosingTagArray</b
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>F:/GitHub/NullReferenceException/Library/PackageCache/com.unity.textmeshpro@3.0.1/Scripts/Runtime/TMP_Style.cs</li>
+<li>F:/GitHub/NullReferenceException/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMP_Style.cs</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

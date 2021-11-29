@@ -70,6 +70,7 @@ $(function() {
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pac-static-methods">Static Package Functions</a> &#124;
 <a href="#pri-static-methods">Static Private Member Functions</a> &#124;
 <a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="../../db/d9d/class_t_m_pro_1_1_t_m_p___text_utilities-members.html">List of all members</a>  </div>
@@ -147,6 +148,12 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memdesc:ad5a9161e825c2e1a7717dd16ebff7410"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to convert a properly formatted string which contains an hex value to its decimal value.  <a href="../../d9/d70/class_t_m_pro_1_1_t_m_p___text_utilities.html#ad5a9161e825c2e1a7717dd16ebff7410">More...</a><br /></td></tr>
 <tr class="separator:ad5a9161e825c2e1a7717dd16ebff7410"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pac-static-methods" name="pac-static-methods"></a>
+Static Package Functions</h2></td></tr>
+<tr class="memitem:ab3051f9472ce5b4a3fada005b04014eb"><td class="memItemLeft" align="right" valign="top">static uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d70/class_t_m_pro_1_1_t_m_p___text_utilities.html#ab3051f9472ce5b4a3fada005b04014eb">ToUpperASCIIFast</a> (uint c)</td></tr>
+<tr class="memdesc:ab3051f9472ce5b4a3fada005b04014eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get uppercase version of this ASCII character.  <a href="../../d9/d70/class_t_m_pro_1_1_t_m_p___text_utilities.html#ab3051f9472ce5b4a3fada005b04014eb">More...</a><br /></td></tr>
+<tr class="separator:ab3051f9472ce5b4a3fada005b04014eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-methods" name="pri-static-methods"></a>
 Static Private Member Functions</h2></td></tr>
 <tr class="memitem:a2d03fc52bb3bc2060a3852ffa67ebe43"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d70/class_t_m_pro_1_1_t_m_p___text_utilities.html#a2d03fc52bb3bc2060a3852ffa67ebe43">PointIntersectRectangle</a> (Vector3 m, Vector3 a, Vector3 b, Vector3 c, Vector3 d)</td></tr>
@@ -220,7 +227,7 @@ const string&#160;</td><td class="memItemRight" valign="bottom"><b>k_lookupStrin
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
-<div class="fragment"><div class="line"><a id="l02106" name="l02106"></a><span class="lineno"> 2106</span>        {            </div>
+<div class="fragment"><div class="line"><a id="l02106" name="l02106"></a><span class="lineno"> 2106</span>        {</div>
 <div class="line"><a id="l02107" name="l02107"></a><span class="lineno"> 2107</span>            Vector3 n = b - a;</div>
 <div class="line"><a id="l02108" name="l02108"></a><span class="lineno"> 2108</span>            Vector3 pa = a - point;</div>
 <div class="line"><a id="l02109" name="l02109"></a><span class="lineno"> 2109</span> </div>
@@ -1055,7 +1062,7 @@ const string&#160;</td><td class="memItemRight" valign="bottom"><b>k_lookupStrin
 <div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>                <span class="keywordtype">float</span> descender = rectTransform.TransformPoint(<span class="keyword">new</span> Vector3(0, lineInfo.descender, 0)).y;</div>
 <div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span> </div>
 <div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>                <span class="keywordflow">if</span> (ascender &gt; position.y &amp;&amp; descender &lt; position.y)</div>
-<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>                { </div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>                {</div>
 <div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>                    <span class="comment">//Debug.Log(&quot;Position is on line &quot; + i);</span></div>
 <div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>                    <span class="keywordflow">return</span> i;</div>
 <div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>                }</div>
@@ -1199,9 +1206,9 @@ const string&#160;</td><td class="memItemRight" valign="bottom"><b>k_lookupStrin
 <div class="line"><a id="l01689" name="l01689"></a><span class="lineno"> 1689</span>                                <span class="keywordflow">return</span> i;</div>
 <div class="line"><a id="l01690" name="l01690"></a><span class="lineno"> 1690</span> </div>
 <div class="line"><a id="l01691" name="l01691"></a><span class="lineno"> 1691</span>                            <span class="comment">// Find the closest line segment to position.</span></div>
-<div class="line"><a id="l01692" name="l01692"></a><span class="lineno"> 1692</span>                            <span class="keywordtype">float</span> dbl = <a class="code hl_function" href="../../d9/d70/class_t_m_pro_1_1_t_m_p___text_utilities.html#a85d54c37a54169751a6911fc4211b889">DistanceToLine</a>(bl, tl, position); </div>
-<div class="line"><a id="l01693" name="l01693"></a><span class="lineno"> 1693</span>                            <span class="keywordtype">float</span> dtl = <a class="code hl_function" href="../../d9/d70/class_t_m_pro_1_1_t_m_p___text_utilities.html#a85d54c37a54169751a6911fc4211b889">DistanceToLine</a>(tl, tr, position); </div>
-<div class="line"><a id="l01694" name="l01694"></a><span class="lineno"> 1694</span>                            <span class="keywordtype">float</span> dtr = <a class="code hl_function" href="../../d9/d70/class_t_m_pro_1_1_t_m_p___text_utilities.html#a85d54c37a54169751a6911fc4211b889">DistanceToLine</a>(tr, br, position); </div>
+<div class="line"><a id="l01692" name="l01692"></a><span class="lineno"> 1692</span>                            <span class="keywordtype">float</span> dbl = <a class="code hl_function" href="../../d9/d70/class_t_m_pro_1_1_t_m_p___text_utilities.html#a85d54c37a54169751a6911fc4211b889">DistanceToLine</a>(bl, tl, position);</div>
+<div class="line"><a id="l01693" name="l01693"></a><span class="lineno"> 1693</span>                            <span class="keywordtype">float</span> dtl = <a class="code hl_function" href="../../d9/d70/class_t_m_pro_1_1_t_m_p___text_utilities.html#a85d54c37a54169751a6911fc4211b889">DistanceToLine</a>(tl, tr, position);</div>
+<div class="line"><a id="l01694" name="l01694"></a><span class="lineno"> 1694</span>                            <span class="keywordtype">float</span> dtr = <a class="code hl_function" href="../../d9/d70/class_t_m_pro_1_1_t_m_p___text_utilities.html#a85d54c37a54169751a6911fc4211b889">DistanceToLine</a>(tr, br, position);</div>
 <div class="line"><a id="l01695" name="l01695"></a><span class="lineno"> 1695</span>                            <span class="keywordtype">float</span> dbr = <a class="code hl_function" href="../../d9/d70/class_t_m_pro_1_1_t_m_p___text_utilities.html#a85d54c37a54169751a6911fc4211b889">DistanceToLine</a>(br, bl, position);</div>
 <div class="line"><a id="l01696" name="l01696"></a><span class="lineno"> 1696</span> </div>
 <div class="line"><a id="l01697" name="l01697"></a><span class="lineno"> 1697</span>                            <span class="keywordtype">float</span> d = dbl &lt; dtl ? dbl : dtl;</div>
@@ -1714,14 +1721,14 @@ const string&#160;</td><td class="memItemRight" valign="bottom"><b>k_lookupStrin
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
-<div class="fragment"><div class="line"><a id="l02203" name="l02203"></a><span class="lineno"> 2203</span>        {</div>
-<div class="line"><a id="l02204" name="l02204"></a><span class="lineno"> 2204</span>            <span class="keywordtype">int</span> hashCode = 0;</div>
-<div class="line"><a id="l02205" name="l02205"></a><span class="lineno"> 2205</span> </div>
-<div class="line"><a id="l02206" name="l02206"></a><span class="lineno"> 2206</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; s.Length; i++)</div>
-<div class="line"><a id="l02207" name="l02207"></a><span class="lineno"> 2207</span>                hashCode = ((hashCode &lt;&lt; 5) + hashCode) ^ <a class="code hl_function" href="../../d9/d70/class_t_m_pro_1_1_t_m_p___text_utilities.html#a46addef0f9eb5cf925ae7c7ab23e7bde">ToUpperFast</a>(s[i]);</div>
-<div class="line"><a id="l02208" name="l02208"></a><span class="lineno"> 2208</span> </div>
-<div class="line"><a id="l02209" name="l02209"></a><span class="lineno"> 2209</span>            <span class="keywordflow">return</span> hashCode;</div>
-<div class="line"><a id="l02210" name="l02210"></a><span class="lineno"> 2210</span>        }</div>
+<div class="fragment"><div class="line"><a id="l02214" name="l02214"></a><span class="lineno"> 2214</span>        {</div>
+<div class="line"><a id="l02215" name="l02215"></a><span class="lineno"> 2215</span>            <span class="keywordtype">int</span> hashCode = 0;</div>
+<div class="line"><a id="l02216" name="l02216"></a><span class="lineno"> 2216</span> </div>
+<div class="line"><a id="l02217" name="l02217"></a><span class="lineno"> 2217</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; s.Length; i++)</div>
+<div class="line"><a id="l02218" name="l02218"></a><span class="lineno"> 2218</span>                hashCode = ((hashCode &lt;&lt; 5) + hashCode) ^ <a class="code hl_function" href="../../d9/d70/class_t_m_pro_1_1_t_m_p___text_utilities.html#a46addef0f9eb5cf925ae7c7ab23e7bde">ToUpperFast</a>(s[i]);</div>
+<div class="line"><a id="l02219" name="l02219"></a><span class="lineno"> 2219</span> </div>
+<div class="line"><a id="l02220" name="l02220"></a><span class="lineno"> 2220</span>            <span class="keywordflow">return</span> hashCode;</div>
+<div class="line"><a id="l02221" name="l02221"></a><span class="lineno"> 2221</span>        }</div>
 <div class="ttc" id="aclass_t_m_pro_1_1_t_m_p___text_utilities_html_a46addef0f9eb5cf925ae7c7ab23e7bde"><div class="ttname"><a href="../../d9/d70/class_t_m_pro_1_1_t_m_p___text_utilities.html#a46addef0f9eb5cf925ae7c7ab23e7bde">TMPro.TMP_TextUtilities.ToUpperFast</a></div><div class="ttdeci">static char ToUpperFast(char c)</div><div class="ttdoc">Get uppercase version of this ASCII character.</div><div class="ttdef"><b>Definition:</b> TMP_TextUtilities.cs:2189</div></div>
 </div><!-- fragment -->
 </div>
@@ -1752,14 +1759,14 @@ const string&#160;</td><td class="memItemRight" valign="bottom"><b>k_lookupStrin
 
 <p>Function which returns a simple hashcode from a string. </p>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
-<div class="fragment"><div class="line"><a id="l02217" name="l02217"></a><span class="lineno"> 2217</span>        {</div>
-<div class="line"><a id="l02218" name="l02218"></a><span class="lineno"> 2218</span>            <span class="keywordtype">int</span> hashCode = 0; <span class="comment">// 5381;</span></div>
-<div class="line"><a id="l02219" name="l02219"></a><span class="lineno"> 2219</span> </div>
-<div class="line"><a id="l02220" name="l02220"></a><span class="lineno"> 2220</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; s.Length; i++)</div>
-<div class="line"><a id="l02221" name="l02221"></a><span class="lineno"> 2221</span>                hashCode = (hashCode &lt;&lt; 5) + hashCode ^ s[i];</div>
-<div class="line"><a id="l02222" name="l02222"></a><span class="lineno"> 2222</span> </div>
-<div class="line"><a id="l02223" name="l02223"></a><span class="lineno"> 2223</span>            <span class="keywordflow">return</span> hashCode;</div>
-<div class="line"><a id="l02224" name="l02224"></a><span class="lineno"> 2224</span>        }</div>
+<div class="fragment"><div class="line"><a id="l02228" name="l02228"></a><span class="lineno"> 2228</span>        {</div>
+<div class="line"><a id="l02229" name="l02229"></a><span class="lineno"> 2229</span>            <span class="keywordtype">int</span> hashCode = 0;</div>
+<div class="line"><a id="l02230" name="l02230"></a><span class="lineno"> 2230</span> </div>
+<div class="line"><a id="l02231" name="l02231"></a><span class="lineno"> 2231</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; s.Length; i++)</div>
+<div class="line"><a id="l02232" name="l02232"></a><span class="lineno"> 2232</span>                hashCode = ((hashCode &lt;&lt; 5) + hashCode) ^ s[i];</div>
+<div class="line"><a id="l02233" name="l02233"></a><span class="lineno"> 2233</span> </div>
+<div class="line"><a id="l02234" name="l02234"></a><span class="lineno"> 2234</span>            <span class="keywordflow">return</span> hashCode;</div>
+<div class="line"><a id="l02235" name="l02235"></a><span class="lineno"> 2235</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1789,14 +1796,14 @@ const string&#160;</td><td class="memItemRight" valign="bottom"><b>k_lookupStrin
 
 <p>Function which returns a simple hashcode from a string converted to lowercase. </p>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
-<div class="fragment"><div class="line"><a id="l02231" name="l02231"></a><span class="lineno"> 2231</span>        {</div>
-<div class="line"><a id="l02232" name="l02232"></a><span class="lineno"> 2232</span>            uint hashCode = 5381;</div>
-<div class="line"><a id="l02233" name="l02233"></a><span class="lineno"> 2233</span> </div>
-<div class="line"><a id="l02234" name="l02234"></a><span class="lineno"> 2234</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; s.Length; i++)</div>
-<div class="line"><a id="l02235" name="l02235"></a><span class="lineno"> 2235</span>                hashCode = (hashCode &lt;&lt; 5) + hashCode ^ <a class="code hl_function" href="../../d9/d70/class_t_m_pro_1_1_t_m_p___text_utilities.html#aa6d89dcb1b6fe93c1052b0c36540d3db">ToLowerFast</a>(s[i]);</div>
-<div class="line"><a id="l02236" name="l02236"></a><span class="lineno"> 2236</span> </div>
-<div class="line"><a id="l02237" name="l02237"></a><span class="lineno"> 2237</span>            <span class="keywordflow">return</span> hashCode;</div>
-<div class="line"><a id="l02238" name="l02238"></a><span class="lineno"> 2238</span>        }</div>
+<div class="fragment"><div class="line"><a id="l02242" name="l02242"></a><span class="lineno"> 2242</span>        {</div>
+<div class="line"><a id="l02243" name="l02243"></a><span class="lineno"> 2243</span>            uint hashCode = 5381;</div>
+<div class="line"><a id="l02244" name="l02244"></a><span class="lineno"> 2244</span> </div>
+<div class="line"><a id="l02245" name="l02245"></a><span class="lineno"> 2245</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; s.Length; i++)</div>
+<div class="line"><a id="l02246" name="l02246"></a><span class="lineno"> 2246</span>                hashCode = (hashCode &lt;&lt; 5) + hashCode ^ <a class="code hl_function" href="../../d9/d70/class_t_m_pro_1_1_t_m_p___text_utilities.html#aa6d89dcb1b6fe93c1052b0c36540d3db">ToLowerFast</a>(s[i]);</div>
+<div class="line"><a id="l02247" name="l02247"></a><span class="lineno"> 2247</span> </div>
+<div class="line"><a id="l02248" name="l02248"></a><span class="lineno"> 2248</span>            <span class="keywordflow">return</span> hashCode;</div>
+<div class="line"><a id="l02249" name="l02249"></a><span class="lineno"> 2249</span>        }</div>
 <div class="ttc" id="aclass_t_m_pro_1_1_t_m_p___text_utilities_html_aa6d89dcb1b6fe93c1052b0c36540d3db"><div class="ttname"><a href="../../d9/d70/class_t_m_pro_1_1_t_m_p___text_utilities.html#aa6d89dcb1b6fe93c1052b0c36540d3db">TMPro.TMP_TextUtilities.ToLowerFast</a></div><div class="ttdeci">static char ToLowerFast(char c)</div><div class="ttdoc">Get lowercase version of this ASCII character.</div><div class="ttdef"><b>Definition:</b> TMP_TextUtilities.cs:2178</div></div>
 </div><!-- fragment -->
 </div>
@@ -1833,34 +1840,34 @@ const string&#160;</td><td class="memItemRight" valign="bottom"><b>k_lookupStrin
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
-<div class="fragment"><div class="line"><a id="l02247" name="l02247"></a><span class="lineno"> 2247</span>        {</div>
-<div class="line"><a id="l02248" name="l02248"></a><span class="lineno"> 2248</span>            <span class="keywordflow">switch</span> (hex)</div>
-<div class="line"><a id="l02249" name="l02249"></a><span class="lineno"> 2249</span>            {</div>
-<div class="line"><a id="l02250" name="l02250"></a><span class="lineno"> 2250</span>                <span class="keywordflow">case</span> <span class="charliteral">&#39;0&#39;</span>: <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l02251" name="l02251"></a><span class="lineno"> 2251</span>                <span class="keywordflow">case</span> <span class="charliteral">&#39;1&#39;</span>: <span class="keywordflow">return</span> 1;</div>
-<div class="line"><a id="l02252" name="l02252"></a><span class="lineno"> 2252</span>                <span class="keywordflow">case</span> <span class="charliteral">&#39;2&#39;</span>: <span class="keywordflow">return</span> 2;</div>
-<div class="line"><a id="l02253" name="l02253"></a><span class="lineno"> 2253</span>                <span class="keywordflow">case</span> <span class="charliteral">&#39;3&#39;</span>: <span class="keywordflow">return</span> 3;</div>
-<div class="line"><a id="l02254" name="l02254"></a><span class="lineno"> 2254</span>                <span class="keywordflow">case</span> <span class="charliteral">&#39;4&#39;</span>: <span class="keywordflow">return</span> 4;</div>
-<div class="line"><a id="l02255" name="l02255"></a><span class="lineno"> 2255</span>                <span class="keywordflow">case</span> <span class="charliteral">&#39;5&#39;</span>: <span class="keywordflow">return</span> 5;</div>
-<div class="line"><a id="l02256" name="l02256"></a><span class="lineno"> 2256</span>                <span class="keywordflow">case</span> <span class="charliteral">&#39;6&#39;</span>: <span class="keywordflow">return</span> 6;</div>
-<div class="line"><a id="l02257" name="l02257"></a><span class="lineno"> 2257</span>                <span class="keywordflow">case</span> <span class="charliteral">&#39;7&#39;</span>: <span class="keywordflow">return</span> 7;</div>
-<div class="line"><a id="l02258" name="l02258"></a><span class="lineno"> 2258</span>                <span class="keywordflow">case</span> <span class="charliteral">&#39;8&#39;</span>: <span class="keywordflow">return</span> 8;</div>
-<div class="line"><a id="l02259" name="l02259"></a><span class="lineno"> 2259</span>                <span class="keywordflow">case</span> <span class="charliteral">&#39;9&#39;</span>: <span class="keywordflow">return</span> 9;</div>
-<div class="line"><a id="l02260" name="l02260"></a><span class="lineno"> 2260</span>                <span class="keywordflow">case</span> <span class="charliteral">&#39;A&#39;</span>: <span class="keywordflow">return</span> 10;</div>
-<div class="line"><a id="l02261" name="l02261"></a><span class="lineno"> 2261</span>                <span class="keywordflow">case</span> <span class="charliteral">&#39;B&#39;</span>: <span class="keywordflow">return</span> 11;</div>
-<div class="line"><a id="l02262" name="l02262"></a><span class="lineno"> 2262</span>                <span class="keywordflow">case</span> <span class="charliteral">&#39;C&#39;</span>: <span class="keywordflow">return</span> 12;</div>
-<div class="line"><a id="l02263" name="l02263"></a><span class="lineno"> 2263</span>                <span class="keywordflow">case</span> <span class="charliteral">&#39;D&#39;</span>: <span class="keywordflow">return</span> 13;</div>
-<div class="line"><a id="l02264" name="l02264"></a><span class="lineno"> 2264</span>                <span class="keywordflow">case</span> <span class="charliteral">&#39;E&#39;</span>: <span class="keywordflow">return</span> 14;</div>
-<div class="line"><a id="l02265" name="l02265"></a><span class="lineno"> 2265</span>                <span class="keywordflow">case</span> <span class="charliteral">&#39;F&#39;</span>: <span class="keywordflow">return</span> 15;</div>
-<div class="line"><a id="l02266" name="l02266"></a><span class="lineno"> 2266</span>                <span class="keywordflow">case</span> <span class="charliteral">&#39;a&#39;</span>: <span class="keywordflow">return</span> 10;</div>
-<div class="line"><a id="l02267" name="l02267"></a><span class="lineno"> 2267</span>                <span class="keywordflow">case</span> <span class="charliteral">&#39;b&#39;</span>: <span class="keywordflow">return</span> 11;</div>
-<div class="line"><a id="l02268" name="l02268"></a><span class="lineno"> 2268</span>                <span class="keywordflow">case</span> <span class="charliteral">&#39;c&#39;</span>: <span class="keywordflow">return</span> 12;</div>
-<div class="line"><a id="l02269" name="l02269"></a><span class="lineno"> 2269</span>                <span class="keywordflow">case</span> <span class="charliteral">&#39;d&#39;</span>: <span class="keywordflow">return</span> 13;</div>
-<div class="line"><a id="l02270" name="l02270"></a><span class="lineno"> 2270</span>                <span class="keywordflow">case</span> <span class="charliteral">&#39;e&#39;</span>: <span class="keywordflow">return</span> 14;</div>
-<div class="line"><a id="l02271" name="l02271"></a><span class="lineno"> 2271</span>                <span class="keywordflow">case</span> <span class="charliteral">&#39;f&#39;</span>: <span class="keywordflow">return</span> 15;</div>
-<div class="line"><a id="l02272" name="l02272"></a><span class="lineno"> 2272</span>            }</div>
-<div class="line"><a id="l02273" name="l02273"></a><span class="lineno"> 2273</span>            <span class="keywordflow">return</span> 15;</div>
-<div class="line"><a id="l02274" name="l02274"></a><span class="lineno"> 2274</span>        }</div>
+<div class="fragment"><div class="line"><a id="l02258" name="l02258"></a><span class="lineno"> 2258</span>        {</div>
+<div class="line"><a id="l02259" name="l02259"></a><span class="lineno"> 2259</span>            <span class="keywordflow">switch</span> (hex)</div>
+<div class="line"><a id="l02260" name="l02260"></a><span class="lineno"> 2260</span>            {</div>
+<div class="line"><a id="l02261" name="l02261"></a><span class="lineno"> 2261</span>                <span class="keywordflow">case</span> <span class="charliteral">&#39;0&#39;</span>: <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l02262" name="l02262"></a><span class="lineno"> 2262</span>                <span class="keywordflow">case</span> <span class="charliteral">&#39;1&#39;</span>: <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a id="l02263" name="l02263"></a><span class="lineno"> 2263</span>                <span class="keywordflow">case</span> <span class="charliteral">&#39;2&#39;</span>: <span class="keywordflow">return</span> 2;</div>
+<div class="line"><a id="l02264" name="l02264"></a><span class="lineno"> 2264</span>                <span class="keywordflow">case</span> <span class="charliteral">&#39;3&#39;</span>: <span class="keywordflow">return</span> 3;</div>
+<div class="line"><a id="l02265" name="l02265"></a><span class="lineno"> 2265</span>                <span class="keywordflow">case</span> <span class="charliteral">&#39;4&#39;</span>: <span class="keywordflow">return</span> 4;</div>
+<div class="line"><a id="l02266" name="l02266"></a><span class="lineno"> 2266</span>                <span class="keywordflow">case</span> <span class="charliteral">&#39;5&#39;</span>: <span class="keywordflow">return</span> 5;</div>
+<div class="line"><a id="l02267" name="l02267"></a><span class="lineno"> 2267</span>                <span class="keywordflow">case</span> <span class="charliteral">&#39;6&#39;</span>: <span class="keywordflow">return</span> 6;</div>
+<div class="line"><a id="l02268" name="l02268"></a><span class="lineno"> 2268</span>                <span class="keywordflow">case</span> <span class="charliteral">&#39;7&#39;</span>: <span class="keywordflow">return</span> 7;</div>
+<div class="line"><a id="l02269" name="l02269"></a><span class="lineno"> 2269</span>                <span class="keywordflow">case</span> <span class="charliteral">&#39;8&#39;</span>: <span class="keywordflow">return</span> 8;</div>
+<div class="line"><a id="l02270" name="l02270"></a><span class="lineno"> 2270</span>                <span class="keywordflow">case</span> <span class="charliteral">&#39;9&#39;</span>: <span class="keywordflow">return</span> 9;</div>
+<div class="line"><a id="l02271" name="l02271"></a><span class="lineno"> 2271</span>                <span class="keywordflow">case</span> <span class="charliteral">&#39;A&#39;</span>: <span class="keywordflow">return</span> 10;</div>
+<div class="line"><a id="l02272" name="l02272"></a><span class="lineno"> 2272</span>                <span class="keywordflow">case</span> <span class="charliteral">&#39;B&#39;</span>: <span class="keywordflow">return</span> 11;</div>
+<div class="line"><a id="l02273" name="l02273"></a><span class="lineno"> 2273</span>                <span class="keywordflow">case</span> <span class="charliteral">&#39;C&#39;</span>: <span class="keywordflow">return</span> 12;</div>
+<div class="line"><a id="l02274" name="l02274"></a><span class="lineno"> 2274</span>                <span class="keywordflow">case</span> <span class="charliteral">&#39;D&#39;</span>: <span class="keywordflow">return</span> 13;</div>
+<div class="line"><a id="l02275" name="l02275"></a><span class="lineno"> 2275</span>                <span class="keywordflow">case</span> <span class="charliteral">&#39;E&#39;</span>: <span class="keywordflow">return</span> 14;</div>
+<div class="line"><a id="l02276" name="l02276"></a><span class="lineno"> 2276</span>                <span class="keywordflow">case</span> <span class="charliteral">&#39;F&#39;</span>: <span class="keywordflow">return</span> 15;</div>
+<div class="line"><a id="l02277" name="l02277"></a><span class="lineno"> 2277</span>                <span class="keywordflow">case</span> <span class="charliteral">&#39;a&#39;</span>: <span class="keywordflow">return</span> 10;</div>
+<div class="line"><a id="l02278" name="l02278"></a><span class="lineno"> 2278</span>                <span class="keywordflow">case</span> <span class="charliteral">&#39;b&#39;</span>: <span class="keywordflow">return</span> 11;</div>
+<div class="line"><a id="l02279" name="l02279"></a><span class="lineno"> 2279</span>                <span class="keywordflow">case</span> <span class="charliteral">&#39;c&#39;</span>: <span class="keywordflow">return</span> 12;</div>
+<div class="line"><a id="l02280" name="l02280"></a><span class="lineno"> 2280</span>                <span class="keywordflow">case</span> <span class="charliteral">&#39;d&#39;</span>: <span class="keywordflow">return</span> 13;</div>
+<div class="line"><a id="l02281" name="l02281"></a><span class="lineno"> 2281</span>                <span class="keywordflow">case</span> <span class="charliteral">&#39;e&#39;</span>: <span class="keywordflow">return</span> 14;</div>
+<div class="line"><a id="l02282" name="l02282"></a><span class="lineno"> 2282</span>                <span class="keywordflow">case</span> <span class="charliteral">&#39;f&#39;</span>: <span class="keywordflow">return</span> 15;</div>
+<div class="line"><a id="l02283" name="l02283"></a><span class="lineno"> 2283</span>            }</div>
+<div class="line"><a id="l02284" name="l02284"></a><span class="lineno"> 2284</span>            <span class="keywordflow">return</span> 15;</div>
+<div class="line"><a id="l02285" name="l02285"></a><span class="lineno"> 2285</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -2217,17 +2224,17 @@ const string&#160;</td><td class="memItemRight" valign="bottom"><b>k_lookupStrin
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
-<div class="fragment"><div class="line"><a id="l02283" name="l02283"></a><span class="lineno"> 2283</span>        {</div>
-<div class="line"><a id="l02284" name="l02284"></a><span class="lineno"> 2284</span>            <span class="keywordtype">int</span> value = 0;</div>
-<div class="line"><a id="l02285" name="l02285"></a><span class="lineno"> 2285</span> </div>
-<div class="line"><a id="l02286" name="l02286"></a><span class="lineno"> 2286</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; s.Length; i++)</div>
-<div class="line"><a id="l02287" name="l02287"></a><span class="lineno"> 2287</span>            {</div>
-<div class="line"><a id="l02288" name="l02288"></a><span class="lineno"> 2288</span>                value += <a class="code hl_function" href="../../d9/d70/class_t_m_pro_1_1_t_m_p___text_utilities.html#a4955bc1c00d450dad6ed09afc6fa837f">HexToInt</a>(s[i]) * (int)Mathf.Pow(16, (s.Length - 1) - i);</div>
-<div class="line"><a id="l02289" name="l02289"></a><span class="lineno"> 2289</span>            }</div>
-<div class="line"><a id="l02290" name="l02290"></a><span class="lineno"> 2290</span> </div>
-<div class="line"><a id="l02291" name="l02291"></a><span class="lineno"> 2291</span>            <span class="keywordflow">return</span> value;</div>
-<div class="line"><a id="l02292" name="l02292"></a><span class="lineno"> 2292</span>        }</div>
-<div class="ttc" id="aclass_t_m_pro_1_1_t_m_p___text_utilities_html_a4955bc1c00d450dad6ed09afc6fa837f"><div class="ttname"><a href="../../d9/d70/class_t_m_pro_1_1_t_m_p___text_utilities.html#a4955bc1c00d450dad6ed09afc6fa837f">TMPro.TMP_TextUtilities.HexToInt</a></div><div class="ttdeci">static int HexToInt(char hex)</div><div class="ttdoc">Function to convert Hex to Int</div><div class="ttdef"><b>Definition:</b> TMP_TextUtilities.cs:2246</div></div>
+<div class="fragment"><div class="line"><a id="l02294" name="l02294"></a><span class="lineno"> 2294</span>        {</div>
+<div class="line"><a id="l02295" name="l02295"></a><span class="lineno"> 2295</span>            <span class="keywordtype">int</span> value = 0;</div>
+<div class="line"><a id="l02296" name="l02296"></a><span class="lineno"> 2296</span> </div>
+<div class="line"><a id="l02297" name="l02297"></a><span class="lineno"> 2297</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; s.Length; i++)</div>
+<div class="line"><a id="l02298" name="l02298"></a><span class="lineno"> 2298</span>            {</div>
+<div class="line"><a id="l02299" name="l02299"></a><span class="lineno"> 2299</span>                value += <a class="code hl_function" href="../../d9/d70/class_t_m_pro_1_1_t_m_p___text_utilities.html#a4955bc1c00d450dad6ed09afc6fa837f">HexToInt</a>(s[i]) * (int)Mathf.Pow(16, (s.Length - 1) - i);</div>
+<div class="line"><a id="l02300" name="l02300"></a><span class="lineno"> 2300</span>            }</div>
+<div class="line"><a id="l02301" name="l02301"></a><span class="lineno"> 2301</span> </div>
+<div class="line"><a id="l02302" name="l02302"></a><span class="lineno"> 2302</span>            <span class="keywordflow">return</span> value;</div>
+<div class="line"><a id="l02303" name="l02303"></a><span class="lineno"> 2303</span>        }</div>
+<div class="ttc" id="aclass_t_m_pro_1_1_t_m_p___text_utilities_html_a4955bc1c00d450dad6ed09afc6fa837f"><div class="ttname"><a href="../../d9/d70/class_t_m_pro_1_1_t_m_p___text_utilities.html#a4955bc1c00d450dad6ed09afc6fa837f">TMPro.TMP_TextUtilities.HexToInt</a></div><div class="ttdeci">static int HexToInt(char hex)</div><div class="ttdoc">Function to convert Hex to Int</div><div class="ttdef"><b>Definition:</b> TMP_TextUtilities.cs:2257</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -2266,6 +2273,41 @@ const string&#160;</td><td class="memItemRight" valign="bottom"><b>k_lookupStrin
 </div><!-- fragment -->
 </div>
 </div>
+<a id="ab3051f9472ce5b4a3fada005b04014eb" name="ab3051f9472ce5b4a3fada005b04014eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3051f9472ce5b4a3fada005b04014eb">&#9670;&nbsp;</a></span>ToUpperASCIIFast()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static uint TMPro.TMP_TextUtilities.ToUpperASCIIFast </td>
+          <td>(</td>
+          <td class="paramtype">uint&#160;</td>
+          <td class="paramname"><em>c</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get uppercase version of this ASCII character. </p>
+<div class="fragment"><div class="line"><a id="l02201" name="l02201"></a><span class="lineno"> 2201</span>        {</div>
+<div class="line"><a id="l02202" name="l02202"></a><span class="lineno"> 2202</span>            <span class="keywordflow">if</span> (c &gt; <a class="code hl_variable" href="../../d9/d70/class_t_m_pro_1_1_t_m_p___text_utilities.html#aaef3e2a6e44ad09faa8656204c758479">k_lookupStringU</a>.Length - 1)</div>
+<div class="line"><a id="l02203" name="l02203"></a><span class="lineno"> 2203</span>                <span class="keywordflow">return</span> c;</div>
+<div class="line"><a id="l02204" name="l02204"></a><span class="lineno"> 2204</span> </div>
+<div class="line"><a id="l02205" name="l02205"></a><span class="lineno"> 2205</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d9/d70/class_t_m_pro_1_1_t_m_p___text_utilities.html#aaef3e2a6e44ad09faa8656204c758479">k_lookupStringU</a>[(int)c];</div>
+<div class="line"><a id="l02206" name="l02206"></a><span class="lineno"> 2206</span>        }</div>
+<div class="ttc" id="aclass_t_m_pro_1_1_t_m_p___text_utilities_html_aaef3e2a6e44ad09faa8656204c758479"><div class="ttname"><a href="../../d9/d70/class_t_m_pro_1_1_t_m_p___text_utilities.html#aaef3e2a6e44ad09faa8656204c758479">TMPro.TMP_TextUtilities.k_lookupStringU</a></div><div class="ttdeci">const string k_lookupStringU</div><div class="ttdoc">Table used to convert character to uppercase.</div><div class="ttdef"><b>Definition:</b> TMP_TextUtilities.cs:2172</div></div>
+</div><!-- fragment -->
+</div>
+</div>
 <a id="a46addef0f9eb5cf925ae7c7ab23e7bde" name="a46addef0f9eb5cf925ae7c7ab23e7bde"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a46addef0f9eb5cf925ae7c7ab23e7bde">&#9670;&nbsp;</a></span>ToUpperFast()</h2>
 
@@ -2297,7 +2339,6 @@ const string&#160;</td><td class="memItemRight" valign="bottom"><b>k_lookupStrin
 <div class="line"><a id="l02193" name="l02193"></a><span class="lineno"> 2193</span> </div>
 <div class="line"><a id="l02194" name="l02194"></a><span class="lineno"> 2194</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d9/d70/class_t_m_pro_1_1_t_m_p___text_utilities.html#aaef3e2a6e44ad09faa8656204c758479">k_lookupStringU</a>[c];</div>
 <div class="line"><a id="l02195" name="l02195"></a><span class="lineno"> 2195</span>        }</div>
-<div class="ttc" id="aclass_t_m_pro_1_1_t_m_p___text_utilities_html_aaef3e2a6e44ad09faa8656204c758479"><div class="ttname"><a href="../../d9/d70/class_t_m_pro_1_1_t_m_p___text_utilities.html#aaef3e2a6e44ad09faa8656204c758479">TMPro.TMP_TextUtilities.k_lookupStringU</a></div><div class="ttdeci">const string k_lookupStringU</div><div class="ttdoc">Table used to convert character to uppercase.</div><div class="ttdef"><b>Definition:</b> TMP_TextUtilities.cs:2172</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -2338,7 +2379,7 @@ const string&#160;</td><td class="memItemRight" valign="bottom"><b>k_lookupStrin
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>F:/GitHub/NullReferenceException/Library/PackageCache/com.unity.textmeshpro@3.0.1/Scripts/Runtime/TMP_TextUtilities.cs</li>
+<li>F:/GitHub/NullReferenceException/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMP_TextUtilities.cs</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

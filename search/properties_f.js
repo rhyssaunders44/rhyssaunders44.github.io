@@ -16,6 +16,5 @@ var searchData=
   ['richtext_13',['richText',['../d7/d32/class_t_m_pro_1_1_t_m_p___text.html#a3d9afda5078a7e48a52206736facf972',1,'TMPro::TMP_Text']]],
   ['rolloversize_14',['rolloverSize',['../d9/d70/struct_t_m_pro_1_1_t_m_p___text_processing_stack.html#a4d53f5d9b935098cf582927136a62cde',1,'TMPro::TMP_TextProcessingStack']]],
   ['roottrackcount_15',['rootTrackCount',['../db/d78/class_unity_engine_1_1_timeline_1_1_timeline_asset.html#a2e7a1b91fb7c0ac4de7ee5069e4d5d86',1,'UnityEngine::Timeline::TimelineAsset']]],
-  ['rotation_16',['Rotation',['../d9/df8/class_null_framework_exception_1_1_teleport_1_1_teleport_point.html#a0d6bb71d8cdc10a194a58164820fccaf',1,'NullFrameworkException::Teleport::TeleportPoint']]],
-  ['rotation_17',['rotation',['../d3/d02/class_unity_engine_1_1_timeline_1_1_animation_playable_asset.html#a6a0a690a77bf10d7b41a96501ea9ff45',1,'UnityEngine.Timeline.AnimationPlayableAsset.rotation()'],['../db/d63/class_unity_engine_1_1_timeline_1_1_animation_track.html#aeaa0662d02f0e22e9d243a3829b47e5a',1,'UnityEngine.Timeline.AnimationTrack.rotation()']]]
+  ['rotation_16',['rotation',['../d3/d02/class_unity_engine_1_1_timeline_1_1_animation_playable_asset.html#a6a0a690a77bf10d7b41a96501ea9ff45',1,'UnityEngine.Timeline.AnimationPlayableAsset.rotation()'],['../db/d63/class_unity_engine_1_1_timeline_1_1_animation_track.html#aeaa0662d02f0e22e9d243a3829b47e5a',1,'UnityEngine.Timeline.AnimationTrack.rotation()']]]
 ];

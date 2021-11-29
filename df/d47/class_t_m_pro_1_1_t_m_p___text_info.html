@@ -168,6 +168,8 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>materialCount</b></td>
 Package Functions</h2></td></tr>
 <tr class="memitem:a20463e6747637cf7ce4e0d92bd204013"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d47/class_t_m_pro_1_1_t_m_p___text_info.html#a20463e6747637cf7ce4e0d92bd204013">TMP_TextInfo</a> (int characterCount)</td></tr>
 <tr class="separator:a20463e6747637cf7ce4e0d92bd204013"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9d0186a307a737364bbdfb3d21a02b4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d47/class_t_m_pro_1_1_t_m_p___text_info.html#ac9d0186a307a737364bbdfb3d21a02b4">ClearAllData</a> ()</td></tr>
+<tr class="separator:ac9d0186a307a737364bbdfb3d21a02b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a12aed2d7c9775d0f7179a6937f5e4b87"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d47/class_t_m_pro_1_1_t_m_p___text_info.html#a12aed2d7c9775d0f7179a6937f5e4b87">ClearPageInfo</a> ()</td></tr>
 <tr class="separator:a12aed2d7c9775d0f7179a6937f5e4b87"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -318,6 +320,52 @@ Private Attributes</h2></td></tr>
 </div><!-- fragment -->
 </div>
 </div>
+<a id="ac9d0186a307a737364bbdfb3d21a02b4" name="ac9d0186a307a737364bbdfb3d21a02b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9d0186a307a737364bbdfb3d21a02b4">&#9670;&nbsp;</a></span>ClearAllData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TMPro.TMP_TextInfo.ClearAllData </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p></p>
+<div class="fragment"><div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        {</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>            characterCount = 0;</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>            spaceCount = 0;</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>            wordCount = 0;</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>            linkCount = 0;</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>            lineCount = 0;</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>            pageCount = 0;</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>            spriteCount = 0;</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>            this.characterInfo = <span class="keyword">new</span> TMP_CharacterInfo[4];</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>            this.wordInfo = <span class="keyword">new</span> TMP_WordInfo[1];</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>            this.lineInfo = <span class="keyword">new</span> TMP_LineInfo[1];</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>            this.pageInfo = <span class="keyword">new</span> TMP_PageInfo[1];</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>            this.linkInfo = <span class="keyword">new</span> TMP_LinkInfo[0];</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>            materialCount = 0;</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>            this.meshInfo = <span class="keyword">new</span> TMP_MeshInfo[1];</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>        }</div>
+</div><!-- fragment -->
+</div>
+</div>
 <a id="aaf8e50d7075ed34cd7668d5df8225194" name="aaf8e50d7075ed34cd7668d5df8225194"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aaf8e50d7075ed34cd7668d5df8225194">&#9670;&nbsp;</a></span>ClearAllMeshInfo()</h2>
 
@@ -334,10 +382,10 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Function to clear the content of all the MeshInfo arrays while preserving their Triangles, Normals and Tangents. </p>
-<div class="fragment"><div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        {</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; this.meshInfo.Length; i++)</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>                this.meshInfo[i].<a class="code hl_function" href="../../df/d47/class_t_m_pro_1_1_t_m_p___text_info.html#a15b8c8e9f46c5412276e45c6f675edf2">Clear</a>(<span class="keyword">true</span>);</div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        }</div>
+<div class="fragment"><div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>        {</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; this.meshInfo.Length; i++)</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>                this.meshInfo[i].<a class="code hl_function" href="../../df/d47/class_t_m_pro_1_1_t_m_p___text_info.html#a15b8c8e9f46c5412276e45c6f675edf2">Clear</a>(<span class="keyword">true</span>);</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>        }</div>
 <div class="ttc" id="aclass_t_m_pro_1_1_t_m_p___text_info_html_a15b8c8e9f46c5412276e45c6f675edf2"><div class="ttname"><a href="../../df/d47/class_t_m_pro_1_1_t_m_p___text_info.html#a15b8c8e9f46c5412276e45c6f675edf2">TMPro.TMP_TextInfo.Clear</a></div><div class="ttdeci">void Clear()</div><div class="ttdoc">Function to clear the counters of the text object.</div><div class="ttdef"><b>Definition:</b> TMP_TextInfo.cs:83</div></div>
 </div><!-- fragment -->
 </div>
@@ -358,33 +406,33 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Function to clear and initialize the lineInfo array. </p>
-<div class="fragment"><div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>        {</div>
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>            <span class="keywordflow">if</span> (this.lineInfo == <span class="keyword">null</span>)</div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>                this.lineInfo = <span class="keyword">new</span> TMP_LineInfo[2];</div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span> </div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>            <span class="keywordtype">int</span> length = this.lineInfo.Length;</div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span> </div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; length; i++)</div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>            {</div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>                this.lineInfo[i].characterCount = 0;</div>
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>                this.lineInfo[i].spaceCount = 0;</div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>                this.lineInfo[i].wordCount = 0;</div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>                this.lineInfo[i].controlCharacterCount = 0;</div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>                this.lineInfo[i].width = 0;</div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span> </div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>                this.lineInfo[i].ascender = k_InfinityVectorNegative.x;</div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>                this.lineInfo[i].descender = k_InfinityVectorPositive.x;</div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span> </div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>                this.lineInfo[i].marginLeft = 0;</div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>                this.lineInfo[i].marginRight = 0;</div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span> </div>
-<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>                this.lineInfo[i].lineExtents.min = k_InfinityVectorPositive;</div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>                this.lineInfo[i].lineExtents.max = k_InfinityVectorNegative;</div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span> </div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>                this.lineInfo[i].maxAdvance = 0;</div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>                <span class="comment">//this.lineInfo[i].maxScale = 0;</span></div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>            }</div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>        }</div>
+<div class="fragment"><div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>        {</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>            <span class="keywordflow">if</span> (this.lineInfo == <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>                this.lineInfo = <span class="keyword">new</span> TMP_LineInfo[2];</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span> </div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>            <span class="keywordtype">int</span> length = this.lineInfo.Length;</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span> </div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; length; i++)</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>            {</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>                this.lineInfo[i].characterCount = 0;</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>                this.lineInfo[i].spaceCount = 0;</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>                this.lineInfo[i].wordCount = 0;</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>                this.lineInfo[i].controlCharacterCount = 0;</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>                this.lineInfo[i].width = 0;</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span> </div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>                this.lineInfo[i].ascender = k_InfinityVectorNegative.x;</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>                this.lineInfo[i].descender = k_InfinityVectorPositive.x;</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span> </div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>                this.lineInfo[i].marginLeft = 0;</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>                this.lineInfo[i].marginRight = 0;</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span> </div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>                this.lineInfo[i].lineExtents.min = k_InfinityVectorPositive;</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>                this.lineInfo[i].lineExtents.max = k_InfinityVectorNegative;</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span> </div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>                this.lineInfo[i].maxAdvance = 0;</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>                <span class="comment">//this.lineInfo[i].maxScale = 0;</span></div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>            }</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -405,10 +453,10 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Function to clear the content of the MeshInfo array while preserving the Triangles, Normals and Tangents. </p>
-<div class="fragment"><div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        {</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; this.meshInfo.Length; i++)</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>                this.meshInfo[i].<a class="code hl_function" href="../../df/d47/class_t_m_pro_1_1_t_m_p___text_info.html#a15b8c8e9f46c5412276e45c6f675edf2">Clear</a>(updateMesh);</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        }</div>
+<div class="fragment"><div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>        {</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; this.meshInfo.Length; i++)</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>                this.meshInfo[i].<a class="code hl_function" href="../../df/d47/class_t_m_pro_1_1_t_m_p___text_info.html#a15b8c8e9f46c5412276e45c6f675edf2">Clear</a>(updateMesh);</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -434,21 +482,21 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>        {</div>
-<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>            <span class="keywordflow">if</span> (this.pageInfo == <span class="keyword">null</span>)</div>
-<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>                this.pageInfo = <span class="keyword">new</span> TMP_PageInfo[2];</div>
-<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span> </div>
-<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>            <span class="keywordtype">int</span> length = this.pageInfo.Length;</div>
-<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span> </div>
-<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; length; i++)</div>
-<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>            {</div>
-<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>                this.pageInfo[i].firstCharacterIndex = 0;</div>
-<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>                this.pageInfo[i].lastCharacterIndex = 0;</div>
-<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>                this.pageInfo[i].ascender = -32767;</div>
-<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>                this.pageInfo[i].baseLine = 0;</div>
-<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>                this.pageInfo[i].descender = 32767;</div>
-<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>            }</div>
-<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>        }</div>
+<div class="fragment"><div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>        {</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>            <span class="keywordflow">if</span> (this.pageInfo == <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>                this.pageInfo = <span class="keyword">new</span> TMP_PageInfo[2];</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span> </div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>            <span class="keywordtype">int</span> length = this.pageInfo.Length;</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span> </div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; length; i++)</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>            {</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>                this.pageInfo[i].firstCharacterIndex = 0;</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>                this.pageInfo[i].lastCharacterIndex = 0;</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>                this.pageInfo[i].ascender = -32767;</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>                this.pageInfo[i].baseLine = 0;</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>                this.pageInfo[i].descender = 32767;</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>            }</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -475,14 +523,14 @@ Private Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>        {</div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; meshInfo.Length; i++)</div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>            {</div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>                <span class="keywordtype">int</span> start = 0; <span class="comment">// materials[i].referenceCount * 4;</span></div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>                meshInfo[i].<a class="code hl_function" href="../../d3/dc0/struct_t_m_pro_1_1_t_m_p___mesh_info.html#a7abd732cdaf4d54113166700701defd4">ClearUnusedVertices</a>(start);</div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>            }</div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>        }</div>
-<div class="ttc" id="astruct_t_m_pro_1_1_t_m_p___mesh_info_html_a7abd732cdaf4d54113166700701defd4"><div class="ttname"><a href="../../d3/dc0/struct_t_m_pro_1_1_t_m_p___mesh_info.html#a7abd732cdaf4d54113166700701defd4">TMPro.TMP_MeshInfo.ClearUnusedVertices</a></div><div class="ttdeci">void ClearUnusedVertices()</div><div class="ttdoc">Function to clear the vertices while preserving the Triangles, Normals and Tangents.</div><div class="ttdef"><b>Definition:</b> TMP_MeshInfo.cs:467</div></div>
+<div class="fragment"><div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>        {</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; meshInfo.Length; i++)</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>            {</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>                <span class="keywordtype">int</span> start = 0; <span class="comment">// materials[i].referenceCount * 4;</span></div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>                meshInfo[i].<a class="code hl_function" href="../../d3/dc0/struct_t_m_pro_1_1_t_m_p___mesh_info.html#a7abd732cdaf4d54113166700701defd4">ClearUnusedVertices</a>(start);</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>            }</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>        }</div>
+<div class="ttc" id="astruct_t_m_pro_1_1_t_m_p___mesh_info_html_a7abd732cdaf4d54113166700701defd4"><div class="ttname"><a href="../../d3/dc0/struct_t_m_pro_1_1_t_m_p___mesh_info.html#a7abd732cdaf4d54113166700701defd4">TMPro.TMP_MeshInfo.ClearUnusedVertices</a></div><div class="ttdeci">void ClearUnusedVertices()</div><div class="ttdoc">Function to clear the vertices while preserving the Triangles, Normals and Tangents.</div><div class="ttdef"><b>Definition:</b> TMP_MeshInfo.cs:470</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -503,57 +551,57 @@ Private Attributes</h2></td></tr>
 
 <p>Function to copy the MeshInfo Arrays and their primary vertex data content. </p>
 <dl class="section return"><dt>Returns</dt><dd>A copy of the MeshInfo[]</dd></dl>
-<div class="fragment"><div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>        {</div>
-<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>            <span class="keywordflow">if</span> (m_CachedMeshInfo == <span class="keyword">null</span> || m_CachedMeshInfo.Length != meshInfo.Length)</div>
-<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>            {</div>
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>                m_CachedMeshInfo = <span class="keyword">new</span> TMP_MeshInfo[meshInfo.Length];</div>
-<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span> </div>
-<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>                <span class="comment">// Initialize all the vertex data arrays</span></div>
-<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; m_CachedMeshInfo.Length; i++)</div>
-<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>                {</div>
-<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>                    <span class="keywordtype">int</span> length = meshInfo[i].vertices.Length;</div>
-<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span> </div>
-<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>                    m_CachedMeshInfo[i].vertices = <span class="keyword">new</span> Vector3[length];</div>
-<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>                    m_CachedMeshInfo[i].uvs0 = <span class="keyword">new</span> Vector2[length];</div>
-<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>                    m_CachedMeshInfo[i].uvs2 = <span class="keyword">new</span> Vector2[length];</div>
-<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>                    m_CachedMeshInfo[i].colors32 = <span class="keyword">new</span> Color32[length];</div>
-<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span> </div>
-<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>                    <span class="comment">//m_CachedMeshInfo[i].normals = new Vector3[length];</span></div>
-<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>                    <span class="comment">//m_CachedMeshInfo[i].tangents = new Vector4[length];</span></div>
-<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>                    <span class="comment">//m_CachedMeshInfo[i].triangles = new int[meshInfo[i].triangles.Length];</span></div>
-<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>                }</div>
-<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>            }</div>
-<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span> </div>
-<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; m_CachedMeshInfo.Length; i++)</div>
-<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>            {</div>
-<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>                <span class="keywordtype">int</span> length = meshInfo[i].vertices.Length;</div>
-<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span> </div>
-<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>                <span class="keywordflow">if</span> (m_CachedMeshInfo[i].vertices.Length != length)</div>
-<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>                {</div>
-<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>                    m_CachedMeshInfo[i].vertices = <span class="keyword">new</span> Vector3[length];</div>
-<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>                    m_CachedMeshInfo[i].uvs0 = <span class="keyword">new</span> Vector2[length];</div>
-<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>                    m_CachedMeshInfo[i].uvs2 = <span class="keyword">new</span> Vector2[length];</div>
-<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>                    m_CachedMeshInfo[i].colors32 = <span class="keyword">new</span> Color32[length];</div>
-<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span> </div>
-<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>                    <span class="comment">//m_CachedMeshInfo[i].normals = new Vector3[length];</span></div>
-<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>                    <span class="comment">//m_CachedMeshInfo[i].tangents = new Vector4[length];</span></div>
-<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>                    <span class="comment">//m_CachedMeshInfo[i].triangles = new int[meshInfo[i].triangles.Length];</span></div>
-<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>                }</div>
-<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span> </div>
-<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span> </div>
-<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>                <span class="comment">// Only copy the primary vertex data</span></div>
-<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>                Array.Copy(meshInfo[i].vertices, m_CachedMeshInfo[i].vertices, length);</div>
-<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>                Array.Copy(meshInfo[i].uvs0, m_CachedMeshInfo[i].uvs0, length);</div>
-<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>                Array.Copy(meshInfo[i].uvs2, m_CachedMeshInfo[i].uvs2, length);</div>
-<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>                Array.Copy(meshInfo[i].colors32, m_CachedMeshInfo[i].colors32, length);</div>
-<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span> </div>
-<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>                <span class="comment">//Array.Copy(meshInfo[i].normals, m_CachedMeshInfo[i].normals, length);</span></div>
-<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>                <span class="comment">//Array.Copy(meshInfo[i].tangents, m_CachedMeshInfo[i].tangents, length);</span></div>
-<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>                <span class="comment">//Array.Copy(meshInfo[i].triangles, m_CachedMeshInfo[i].triangles, meshInfo[i].triangles.Length);</span></div>
-<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>            }</div>
-<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span> </div>
-<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>            <span class="keywordflow">return</span> m_CachedMeshInfo;</div>
-<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>        }</div>
+<div class="fragment"><div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>        {</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>            <span class="keywordflow">if</span> (m_CachedMeshInfo == <span class="keyword">null</span> || m_CachedMeshInfo.Length != meshInfo.Length)</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>            {</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>                m_CachedMeshInfo = <span class="keyword">new</span> TMP_MeshInfo[meshInfo.Length];</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span> </div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>                <span class="comment">// Initialize all the vertex data arrays</span></div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; m_CachedMeshInfo.Length; i++)</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>                {</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>                    <span class="keywordtype">int</span> length = meshInfo[i].vertices.Length;</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span> </div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>                    m_CachedMeshInfo[i].vertices = <span class="keyword">new</span> Vector3[length];</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>                    m_CachedMeshInfo[i].uvs0 = <span class="keyword">new</span> Vector2[length];</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>                    m_CachedMeshInfo[i].uvs2 = <span class="keyword">new</span> Vector2[length];</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>                    m_CachedMeshInfo[i].colors32 = <span class="keyword">new</span> Color32[length];</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span> </div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>                    <span class="comment">//m_CachedMeshInfo[i].normals = new Vector3[length];</span></div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>                    <span class="comment">//m_CachedMeshInfo[i].tangents = new Vector4[length];</span></div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>                    <span class="comment">//m_CachedMeshInfo[i].triangles = new int[meshInfo[i].triangles.Length];</span></div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>                }</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>            }</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span> </div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; m_CachedMeshInfo.Length; i++)</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>            {</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>                <span class="keywordtype">int</span> length = meshInfo[i].vertices.Length;</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span> </div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>                <span class="keywordflow">if</span> (m_CachedMeshInfo[i].vertices.Length != length)</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>                {</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>                    m_CachedMeshInfo[i].vertices = <span class="keyword">new</span> Vector3[length];</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>                    m_CachedMeshInfo[i].uvs0 = <span class="keyword">new</span> Vector2[length];</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>                    m_CachedMeshInfo[i].uvs2 = <span class="keyword">new</span> Vector2[length];</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>                    m_CachedMeshInfo[i].colors32 = <span class="keyword">new</span> Color32[length];</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span> </div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>                    <span class="comment">//m_CachedMeshInfo[i].normals = new Vector3[length];</span></div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>                    <span class="comment">//m_CachedMeshInfo[i].tangents = new Vector4[length];</span></div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>                    <span class="comment">//m_CachedMeshInfo[i].triangles = new int[meshInfo[i].triangles.Length];</span></div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>                }</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span> </div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span> </div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>                <span class="comment">// Only copy the primary vertex data</span></div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>                Array.Copy(meshInfo[i].vertices, m_CachedMeshInfo[i].vertices, length);</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>                Array.Copy(meshInfo[i].uvs0, m_CachedMeshInfo[i].uvs0, length);</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>                Array.Copy(meshInfo[i].uvs2, m_CachedMeshInfo[i].uvs2, length);</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>                Array.Copy(meshInfo[i].colors32, m_CachedMeshInfo[i].colors32, length);</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span> </div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>                <span class="comment">//Array.Copy(meshInfo[i].normals, m_CachedMeshInfo[i].normals, length);</span></div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>                <span class="comment">//Array.Copy(meshInfo[i].tangents, m_CachedMeshInfo[i].tangents, length);</span></div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>                <span class="comment">//Array.Copy(meshInfo[i].triangles, m_CachedMeshInfo[i].triangles, meshInfo[i].triangles.Length);</span></div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>            }</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span> </div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>            <span class="keywordflow">return</span> m_CachedMeshInfo;</div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -574,10 +622,10 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p></p>
-<div class="fragment"><div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>        {</div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; this.meshInfo.Length; i++)</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>                this.meshInfo[i].ResizeMeshInfo(0, isVolumetric);</div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>        }</div>
+<div class="fragment"><div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>        {</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; this.meshInfo.Length; i++)</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>                this.meshInfo[i].ResizeMeshInfo(0, isVolumetric);</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -629,12 +677,12 @@ Private Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>        {</div>
-<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>            <span class="comment">// Allocated to the next power of two</span></div>
-<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>            <span class="keywordtype">int</span> newSize = size &gt; 1024 ? size + 256 : Mathf.NextPowerOfTwo(size);</div>
-<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span> </div>
-<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>            Array.Resize(ref array, newSize);</div>
-<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>        }</div>
+<div class="fragment"><div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>        {</div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>            <span class="comment">// Allocated to the next power of two</span></div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>            <span class="keywordtype">int</span> newSize = size &gt; 1024 ? size + 256 : Mathf.NextPowerOfTwo(size);</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span> </div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>            Array.Resize(ref array, newSize);</div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -693,20 +741,20 @@ Private Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>        {</div>
-<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>            <span class="keywordflow">if</span> (isBlockAllocated) size = size &gt; 1024 ? size + 256 : Mathf.NextPowerOfTwo(size);</div>
-<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span> </div>
-<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>            <span class="keywordflow">if</span> (size == array.Length) <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span> </div>
-<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>            <span class="comment">//Debug.Log(&quot;Resizing TextInfo from [&quot; + array.Length + &quot;] to [&quot; + size + &quot;]&quot;);</span></div>
-<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span> </div>
-<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>            Array.Resize(ref array, size);</div>
-<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>        }</div>
+<div class="fragment"><div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>        {</div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>            <span class="keywordflow">if</span> (isBlockAllocated) size = size &gt; 1024 ? size + 256 : Mathf.NextPowerOfTwo(size);</div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span> </div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>            <span class="keywordflow">if</span> (size == array.Length) <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span> </div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>            <span class="comment">//Debug.Log(&quot;Resizing TextInfo from [&quot; + array.Length + &quot;] to [&quot; + size + &quot;]&quot;);</span></div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span> </div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>            Array.Resize(ref array, size);</div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>F:/GitHub/NullReferenceException/Library/PackageCache/com.unity.textmeshpro@3.0.1/Scripts/Runtime/TMP_TextInfo.cs</li>
+<li>F:/GitHub/NullReferenceException/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMP_TextInfo.cs</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

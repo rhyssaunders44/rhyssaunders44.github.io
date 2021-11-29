@@ -68,22 +68,27 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-static-methods">Static Private Member Functions</a> &#124;
 <a href="../../d9/d97/class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___texture_post_processor-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">TMPro.EditorUtilities.TMPro_TexturePostProcessor Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
+<p>Asset post processor used to handle text assets changes. This includes tracking of changes to textures used by sprite assets as well as font assets potentially getting updated outside of the <a class="el" href="../../d3/dda/namespace_unity.html">Unity</a> editor.  
+ <a href="../../d6/d8f/class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___texture_post_processor.html#details">More...</a></p>
+
 <p>Inherits AssetPostprocessor.</p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
-Private Member Functions</h2></td></tr>
-<tr class="memitem:a3bcfbe2751c7b615e9b04d04100673d4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d8f/class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___texture_post_processor.html#a3bcfbe2751c7b615e9b04d04100673d4">OnPostprocessTexture</a> (Texture2D texture)</td></tr>
-<tr class="separator:a3bcfbe2751c7b615e9b04d04100673d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-methods" name="pri-static-methods"></a>
+Static Private Member Functions</h2></td></tr>
+<tr class="memitem:a8a7f0c75ed3099f5f2905bd7d4987ad8"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d8f/class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___texture_post_processor.html#a8a7f0c75ed3099f5f2905bd7d4987ad8">OnPostprocessAllAssets</a> (string[] importedAssets, string[] deletedAssets, string[] movedAssets, string[] movedFromAssetPaths)</td></tr>
+<tr class="separator:a8a7f0c75ed3099f5f2905bd7d4987ad8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="a3bcfbe2751c7b615e9b04d04100673d4" name="a3bcfbe2751c7b615e9b04d04100673d4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3bcfbe2751c7b615e9b04d04100673d4">&#9670;&nbsp;</a></span>OnPostprocessTexture()</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p >Asset post processor used to handle text assets changes. This includes tracking of changes to textures used by sprite assets as well as font assets potentially getting updated outside of the <a class="el" href="../../d3/dda/namespace_unity.html">Unity</a> editor. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a8a7f0c75ed3099f5f2905bd7d4987ad8" name="a8a7f0c75ed3099f5f2905bd7d4987ad8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a7f0c75ed3099f5f2905bd7d4987ad8">&#9670;&nbsp;</a></span>OnPostprocessAllAssets()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -92,31 +97,76 @@ Private Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void TMPro.EditorUtilities.TMPro_TexturePostProcessor.OnPostprocessTexture </td>
+          <td class="memname">static void TMPro.EditorUtilities.TMPro_TexturePostProcessor.OnPostprocessAllAssets </td>
           <td>(</td>
-          <td class="paramtype">Texture2D&#160;</td>
-          <td class="paramname"><em>texture</em></td><td>)</td>
+          <td class="paramtype">string[]&#160;</td>
+          <td class="paramname"><em>importedAssets</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">string[]&#160;</td>
+          <td class="paramname"><em>deletedAssets</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string[]&#160;</td>
+          <td class="paramname"><em>movedAssets</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string[]&#160;</td>
+          <td class="paramname"><em>movedFromAssetPaths</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        {</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>            Texture2D tex = AssetDatabase.LoadAssetAtPath(assetPath, typeof(Texture2D)) as Texture2D;</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>            <span class="comment">// Send Event Sub Objects</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>            <span class="keywordflow">if</span> (tex != <span class="keyword">null</span>)</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>                TMPro_EventManager.ON_SPRITE_ASSET_PROPERTY_CHANGED(<span class="keyword">true</span>, tex);</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        }</div>
+<div class="fragment"><div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        {</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>            <span class="keywordflow">foreach</span> (var asset <span class="keywordflow">in</span> importedAssets)</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>            {</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>                <span class="comment">// Return if imported asset path is outside of the project.</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>                <span class="keywordflow">if</span> (asset.StartsWith(<span class="stringliteral">&quot;Assets/&quot;</span>, StringComparison.OrdinalIgnoreCase) == <span class="keyword">false</span>)</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>                Type assetType = AssetDatabase.GetMainAssetTypeAtPath(asset);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>                <span class="keywordflow">if</span> (assetType == typeof(TMP_FontAsset))</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>                {</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>                    TMP_FontAsset fontAsset = AssetDatabase.LoadAssetAtPath(asset, typeof(TMP_FontAsset)) as TMP_FontAsset;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>                    <span class="comment">// Only refresh font asset definition if font asset was previously initialized.</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>                    <span class="keywordflow">if</span> (fontAsset != <span class="keyword">null</span> &amp;&amp; fontAsset.m_CharacterLookupDictionary != <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>                        TMP_EditorResourceManager.RegisterFontAssetForDefinitionRefresh(fontAsset);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>                }</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>                <span class="keywordflow">if</span> (assetType == typeof(Texture2D))</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>                {</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>                    Texture2D tex = AssetDatabase.LoadAssetAtPath(asset, typeof(Texture2D)) as Texture2D;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>                    <span class="keywordflow">if</span> (tex == <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>                        <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>                    TMPro_EventManager.ON_SPRITE_ASSET_PROPERTY_CHANGED(<span class="keyword">true</span>, tex);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>                    Resources.UnloadAsset(tex);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>                }</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            }</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>F:/GitHub/NullReferenceException/Library/PackageCache/com.unity.textmeshpro@3.0.1/Scripts/Editor/TMPro_TexturePostProcessor.cs</li>
+<li>F:/GitHub/NullReferenceException/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Editor/TMPro_TexturePostProcessor.cs</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

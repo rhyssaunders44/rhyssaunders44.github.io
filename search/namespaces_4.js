@@ -13,7 +13,7 @@ var searchData=
   ['rigidbodycontroller3d_10',['RigidbodyController3D',['../d1/de1/namespace_null_framework_exception_1_1_character_movement_1_1_rigidbody_controller3_d.html',1,'NullFrameworkException.CharacterMovement.RigidbodyController3D'],['../d3/dee/namespace_null_framework_exception_1_1_test_1_1_character_controller_1_1_rigidbody_controller3_d.html',1,'NullFrameworkException.Test.CharacterController.RigidbodyController3D']]],
   ['runnabletest_11',['RunnableTest',['../d4/d58/namespace_null_framework_exception_1_1_test_1_1_core_1_1_runnable_test.html',1,'NullFrameworkException::Test::Core']]],
   ['scenedragndroptest_12',['SceneDragNDropTest',['../dd/d46/namespace_null_framework_exception_1_1_test_1_1_core_1_1_scene_drag_n_drop_test.html',1,'NullFrameworkException::Test::Core']]],
-  ['sortingalgorithm_13',['SortingAlgorithm',['../de/d3d/namespace_null_framework_exception_1_1_sorting_algorithm.html',1,'NullFrameworkException']]],
-  ['teleport_14',['Teleport',['../d4/d8e/namespace_null_framework_exception_1_1_editor_1_1_teleport.html',1,'NullFrameworkException.Editor.Teleport'],['../d0/dfa/namespace_null_framework_exception_1_1_teleport.html',1,'NullFrameworkException.Teleport']]],
+  ['searchingalgorithm_13',['SearchingAlgorithm',['../d1/de8/namespace_null_framework_exception_1_1_test_1_1_core_1_1_searching_algorithm.html',1,'NullFrameworkException::Test::Core']]],
+  ['sortingalgorithm_14',['SortingAlgorithm',['../de/d05/namespace_null_framework_exception_1_1_core_1_1_sorting_algorithm.html',1,'NullFrameworkException.Core.SortingAlgorithm'],['../db/d31/namespace_null_framework_exception_1_1_test_1_1_core_1_1_sorting_algorithm.html',1,'NullFrameworkException.Test.Core.SortingAlgorithm'],['../de/dfb/namespace_null_framework_exception_1_1_test_1_1_sorting_algorithm.html',1,'NullFrameworkException.Test.SortingAlgorithm']]],
   ['test_15',['Test',['../d8/d17/namespace_null_framework_exception_1_1_test.html',1,'NullFrameworkException']]]
 ];

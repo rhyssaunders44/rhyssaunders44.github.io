@@ -300,13 +300,13 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_isRegisteredForEven
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
-<div class="fragment"><div class="line"><a id="l00488" name="l00488"></a><span class="lineno">  488</span>        {</div>
-<div class="line"><a id="l00489" name="l00489"></a><span class="lineno">  489</span>            Material mat = <span class="keyword">new</span> Material(source);</div>
-<div class="line"><a id="l00490" name="l00490"></a><span class="lineno">  490</span>            mat.shaderKeywords = source.shaderKeywords;</div>
-<div class="line"><a id="l00491" name="l00491"></a><span class="lineno">  491</span>            mat.name += <span class="stringliteral">&quot; (Instance)&quot;</span>;</div>
-<div class="line"><a id="l00492" name="l00492"></a><span class="lineno">  492</span> </div>
-<div class="line"><a id="l00493" name="l00493"></a><span class="lineno">  493</span>            <span class="keywordflow">return</span> mat;</div>
-<div class="line"><a id="l00494" name="l00494"></a><span class="lineno">  494</span>        }</div>
+<div class="fragment"><div class="line"><a id="l00490" name="l00490"></a><span class="lineno">  490</span>        {</div>
+<div class="line"><a id="l00491" name="l00491"></a><span class="lineno">  491</span>            Material mat = <span class="keyword">new</span> Material(source);</div>
+<div class="line"><a id="l00492" name="l00492"></a><span class="lineno">  492</span>            mat.shaderKeywords = source.shaderKeywords;</div>
+<div class="line"><a id="l00493" name="l00493"></a><span class="lineno">  493</span>            mat.name += <span class="stringliteral">&quot; (Instance)&quot;</span>;</div>
+<div class="line"><a id="l00494" name="l00494"></a><span class="lineno">  494</span> </div>
+<div class="line"><a id="l00495" name="l00495"></a><span class="lineno">  495</span>            <span class="keywordflow">return</span> mat;</div>
+<div class="line"><a id="l00496" name="l00496"></a><span class="lineno">  496</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -324,9 +324,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_isRegisteredForEven
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a id="l00454" name="l00454"></a><span class="lineno">  454</span>        {</div>
-<div class="line"><a id="l00455" name="l00455"></a><span class="lineno">  455</span>            Destroy(this.gameObject, 1f);</div>
-<div class="line"><a id="l00456" name="l00456"></a><span class="lineno">  456</span>        }</div>
+<div class="fragment"><div class="line"><a id="l00456" name="l00456"></a><span class="lineno">  456</span>        {</div>
+<div class="line"><a id="l00457" name="l00457"></a><span class="lineno">  457</span>            Destroy(this.gameObject, 1f);</div>
+<div class="line"><a id="l00458" name="l00458"></a><span class="lineno">  458</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -353,30 +353,30 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_isRegisteredForEven
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a id="l00460" name="l00460"></a><span class="lineno">  460</span>        {</div>
-<div class="line"><a id="l00461" name="l00461"></a><span class="lineno">  461</span>            <span class="comment">// Check in case Object is disabled. If so, we don&#39;t have a valid reference to the Renderer.</span></div>
-<div class="line"><a id="l00462" name="l00462"></a><span class="lineno">  462</span>            <span class="comment">// This can occur when the Duplicate Material Context menu is used on an inactive object.</span></div>
-<div class="line"><a id="l00463" name="l00463"></a><span class="lineno">  463</span>            <span class="keywordflow">if</span> (m_renderer == <span class="keyword">null</span>)</div>
-<div class="line"><a id="l00464" name="l00464"></a><span class="lineno">  464</span>                m_renderer = GetComponent&lt;Renderer&gt;();</div>
-<div class="line"><a id="l00465" name="l00465"></a><span class="lineno">  465</span> </div>
-<div class="line"><a id="l00466" name="l00466"></a><span class="lineno">  466</span>            <span class="comment">// Create Instance Material only if the new material is not the same instance previously used.</span></div>
-<div class="line"><a id="l00467" name="l00467"></a><span class="lineno">  467</span>            <span class="keywordflow">if</span> (m_material == <span class="keyword">null</span> || m_material.GetInstanceID() != mat.GetInstanceID())</div>
-<div class="line"><a id="l00468" name="l00468"></a><span class="lineno">  468</span>                m_material = <a class="code hl_function" href="../../dc/dd6/class_t_m_pro_1_1_t_m_p___sub_mesh.html#a4295ee687edc5d88478c231e8ac2ed21">CreateMaterialInstance</a>(mat);</div>
-<div class="line"><a id="l00469" name="l00469"></a><span class="lineno">  469</span> </div>
-<div class="line"><a id="l00470" name="l00470"></a><span class="lineno">  470</span>            m_sharedMaterial = m_material;</div>
+<div class="fragment"><div class="line"><a id="l00462" name="l00462"></a><span class="lineno">  462</span>        {</div>
+<div class="line"><a id="l00463" name="l00463"></a><span class="lineno">  463</span>            <span class="comment">// Check in case Object is disabled. If so, we don&#39;t have a valid reference to the Renderer.</span></div>
+<div class="line"><a id="l00464" name="l00464"></a><span class="lineno">  464</span>            <span class="comment">// This can occur when the Duplicate Material Context menu is used on an inactive object.</span></div>
+<div class="line"><a id="l00465" name="l00465"></a><span class="lineno">  465</span>            <span class="keywordflow">if</span> (m_renderer == <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00466" name="l00466"></a><span class="lineno">  466</span>                m_renderer = GetComponent&lt;Renderer&gt;();</div>
+<div class="line"><a id="l00467" name="l00467"></a><span class="lineno">  467</span> </div>
+<div class="line"><a id="l00468" name="l00468"></a><span class="lineno">  468</span>            <span class="comment">// Create Instance Material only if the new material is not the same instance previously used.</span></div>
+<div class="line"><a id="l00469" name="l00469"></a><span class="lineno">  469</span>            <span class="keywordflow">if</span> (m_material == <span class="keyword">null</span> || m_material.GetInstanceID() != mat.GetInstanceID())</div>
+<div class="line"><a id="l00470" name="l00470"></a><span class="lineno">  470</span>                m_material = <a class="code hl_function" href="../../dc/dd6/class_t_m_pro_1_1_t_m_p___sub_mesh.html#a4295ee687edc5d88478c231e8ac2ed21">CreateMaterialInstance</a>(mat);</div>
 <div class="line"><a id="l00471" name="l00471"></a><span class="lineno">  471</span> </div>
-<div class="line"><a id="l00472" name="l00472"></a><span class="lineno">  472</span>            <span class="comment">// Compute and Set new padding values for this new material.</span></div>
-<div class="line"><a id="l00473" name="l00473"></a><span class="lineno">  473</span>            m_padding = <a class="code hl_function" href="../../dc/dd6/class_t_m_pro_1_1_t_m_p___sub_mesh.html#a9bcd237fd39eccac2018a497412504ed">GetPaddingForMaterial</a>();</div>
-<div class="line"><a id="l00474" name="l00474"></a><span class="lineno">  474</span> </div>
-<div class="line"><a id="l00475" name="l00475"></a><span class="lineno">  475</span>            <a class="code hl_function" href="../../dc/dd6/class_t_m_pro_1_1_t_m_p___sub_mesh.html#a130186768b0a54f84638d3b90d3f26a7">SetVerticesDirty</a>();</div>
-<div class="line"><a id="l00476" name="l00476"></a><span class="lineno">  476</span>            <a class="code hl_function" href="../../dc/dd6/class_t_m_pro_1_1_t_m_p___sub_mesh.html#a8df49466a47cb2d29a910fb00dfa2af5">SetMaterialDirty</a>();</div>
-<div class="line"><a id="l00477" name="l00477"></a><span class="lineno">  477</span> </div>
-<div class="line"><a id="l00478" name="l00478"></a><span class="lineno">  478</span>            <span class="keywordflow">return</span> m_sharedMaterial;</div>
-<div class="line"><a id="l00479" name="l00479"></a><span class="lineno">  479</span>        }</div>
-<div class="ttc" id="aclass_t_m_pro_1_1_t_m_p___sub_mesh_html_a130186768b0a54f84638d3b90d3f26a7"><div class="ttname"><a href="../../dc/dd6/class_t_m_pro_1_1_t_m_p___sub_mesh.html#a130186768b0a54f84638d3b90d3f26a7">TMPro.TMP_SubMesh.SetVerticesDirty</a></div><div class="ttdeci">void SetVerticesDirty()</div><div class="ttdef"><b>Definition:</b> TMP_SubMesh.cs:559</div></div>
-<div class="ttc" id="aclass_t_m_pro_1_1_t_m_p___sub_mesh_html_a4295ee687edc5d88478c231e8ac2ed21"><div class="ttname"><a href="../../dc/dd6/class_t_m_pro_1_1_t_m_p___sub_mesh.html#a4295ee687edc5d88478c231e8ac2ed21">TMPro.TMP_SubMesh.CreateMaterialInstance</a></div><div class="ttdeci">Material CreateMaterialInstance(Material source)</div><div class="ttdoc">Method used to create an instance of the material</div><div class="ttdef"><b>Definition:</b> TMP_SubMesh.cs:487</div></div>
-<div class="ttc" id="aclass_t_m_pro_1_1_t_m_p___sub_mesh_html_a8df49466a47cb2d29a910fb00dfa2af5"><div class="ttname"><a href="../../dc/dd6/class_t_m_pro_1_1_t_m_p___sub_mesh.html#a8df49466a47cb2d29a910fb00dfa2af5">TMPro.TMP_SubMesh.SetMaterialDirty</a></div><div class="ttdeci">void SetMaterialDirty()</div><div class="ttdef"><b>Definition:</b> TMP_SubMesh.cs:576</div></div>
-<div class="ttc" id="aclass_t_m_pro_1_1_t_m_p___sub_mesh_html_a9bcd237fd39eccac2018a497412504ed"><div class="ttname"><a href="../../dc/dd6/class_t_m_pro_1_1_t_m_p___sub_mesh.html#a9bcd237fd39eccac2018a497412504ed">TMPro.TMP_SubMesh.GetPaddingForMaterial</a></div><div class="ttdeci">float GetPaddingForMaterial()</div><div class="ttdoc">Function called when the padding value for the material needs to be re-calculated.</div><div class="ttdef"><b>Definition:</b> TMP_SubMesh.cs:537</div></div>
+<div class="line"><a id="l00472" name="l00472"></a><span class="lineno">  472</span>            m_sharedMaterial = m_material;</div>
+<div class="line"><a id="l00473" name="l00473"></a><span class="lineno">  473</span> </div>
+<div class="line"><a id="l00474" name="l00474"></a><span class="lineno">  474</span>            <span class="comment">// Compute and Set new padding values for this new material.</span></div>
+<div class="line"><a id="l00475" name="l00475"></a><span class="lineno">  475</span>            m_padding = <a class="code hl_function" href="../../dc/dd6/class_t_m_pro_1_1_t_m_p___sub_mesh.html#a9bcd237fd39eccac2018a497412504ed">GetPaddingForMaterial</a>();</div>
+<div class="line"><a id="l00476" name="l00476"></a><span class="lineno">  476</span> </div>
+<div class="line"><a id="l00477" name="l00477"></a><span class="lineno">  477</span>            <a class="code hl_function" href="../../dc/dd6/class_t_m_pro_1_1_t_m_p___sub_mesh.html#a130186768b0a54f84638d3b90d3f26a7">SetVerticesDirty</a>();</div>
+<div class="line"><a id="l00478" name="l00478"></a><span class="lineno">  478</span>            <a class="code hl_function" href="../../dc/dd6/class_t_m_pro_1_1_t_m_p___sub_mesh.html#a8df49466a47cb2d29a910fb00dfa2af5">SetMaterialDirty</a>();</div>
+<div class="line"><a id="l00479" name="l00479"></a><span class="lineno">  479</span> </div>
+<div class="line"><a id="l00480" name="l00480"></a><span class="lineno">  480</span>            <span class="keywordflow">return</span> m_sharedMaterial;</div>
+<div class="line"><a id="l00481" name="l00481"></a><span class="lineno">  481</span>        }</div>
+<div class="ttc" id="aclass_t_m_pro_1_1_t_m_p___sub_mesh_html_a130186768b0a54f84638d3b90d3f26a7"><div class="ttname"><a href="../../dc/dd6/class_t_m_pro_1_1_t_m_p___sub_mesh.html#a130186768b0a54f84638d3b90d3f26a7">TMPro.TMP_SubMesh.SetVerticesDirty</a></div><div class="ttdeci">void SetVerticesDirty()</div><div class="ttdef"><b>Definition:</b> TMP_SubMesh.cs:561</div></div>
+<div class="ttc" id="aclass_t_m_pro_1_1_t_m_p___sub_mesh_html_a4295ee687edc5d88478c231e8ac2ed21"><div class="ttname"><a href="../../dc/dd6/class_t_m_pro_1_1_t_m_p___sub_mesh.html#a4295ee687edc5d88478c231e8ac2ed21">TMPro.TMP_SubMesh.CreateMaterialInstance</a></div><div class="ttdeci">Material CreateMaterialInstance(Material source)</div><div class="ttdoc">Method used to create an instance of the material</div><div class="ttdef"><b>Definition:</b> TMP_SubMesh.cs:489</div></div>
+<div class="ttc" id="aclass_t_m_pro_1_1_t_m_p___sub_mesh_html_a8df49466a47cb2d29a910fb00dfa2af5"><div class="ttname"><a href="../../dc/dd6/class_t_m_pro_1_1_t_m_p___sub_mesh.html#a8df49466a47cb2d29a910fb00dfa2af5">TMPro.TMP_SubMesh.SetMaterialDirty</a></div><div class="ttdeci">void SetMaterialDirty()</div><div class="ttdef"><b>Definition:</b> TMP_SubMesh.cs:578</div></div>
+<div class="ttc" id="aclass_t_m_pro_1_1_t_m_p___sub_mesh_html_a9bcd237fd39eccac2018a497412504ed"><div class="ttname"><a href="../../dc/dd6/class_t_m_pro_1_1_t_m_p___sub_mesh.html#a9bcd237fd39eccac2018a497412504ed">TMPro.TMP_SubMesh.GetPaddingForMaterial</a></div><div class="ttdeci">float GetPaddingForMaterial()</div><div class="ttdoc">Function called when the padding value for the material needs to be re-calculated.</div><div class="ttdef"><b>Definition:</b> TMP_SubMesh.cs:539</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -397,11 +397,11 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_isRegisteredForEven
 
 <p>Function called when the padding value for the material needs to be re-calculated. </p>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
-<div class="fragment"><div class="line"><a id="l00538" name="l00538"></a><span class="lineno">  538</span>        {</div>
-<div class="line"><a id="l00539" name="l00539"></a><span class="lineno">  539</span>            <span class="keywordtype">float</span> <a class="code hl_property" href="../../dc/dd6/class_t_m_pro_1_1_t_m_p___sub_mesh.html#adc8e38d6679306c54598bf48db166a3f">padding</a> = ShaderUtilities.GetPadding(m_sharedMaterial, m_TextComponent.<a class="code hl_property" href="../../d7/d32/class_t_m_pro_1_1_t_m_p___text.html#aa06b7d7a7054e899c0be4fa8ed9943b5">extraPadding</a>, m_TextComponent.<a class="code hl_property" href="../../d7/d32/class_t_m_pro_1_1_t_m_p___text.html#a2ad3845a02f7fd35f5b9bd7a34f5bd52">isUsingBold</a>);</div>
-<div class="line"><a id="l00540" name="l00540"></a><span class="lineno">  540</span> </div>
-<div class="line"><a id="l00541" name="l00541"></a><span class="lineno">  541</span>            <span class="keywordflow">return</span> <a class="code hl_property" href="../../dc/dd6/class_t_m_pro_1_1_t_m_p___sub_mesh.html#adc8e38d6679306c54598bf48db166a3f">padding</a>;</div>
-<div class="line"><a id="l00542" name="l00542"></a><span class="lineno">  542</span>        }</div>
+<div class="fragment"><div class="line"><a id="l00540" name="l00540"></a><span class="lineno">  540</span>        {</div>
+<div class="line"><a id="l00541" name="l00541"></a><span class="lineno">  541</span>            <span class="keywordtype">float</span> <a class="code hl_property" href="../../dc/dd6/class_t_m_pro_1_1_t_m_p___sub_mesh.html#adc8e38d6679306c54598bf48db166a3f">padding</a> = ShaderUtilities.GetPadding(m_sharedMaterial, m_TextComponent.<a class="code hl_property" href="../../d7/d32/class_t_m_pro_1_1_t_m_p___text.html#aa06b7d7a7054e899c0be4fa8ed9943b5">extraPadding</a>, m_TextComponent.<a class="code hl_property" href="../../d7/d32/class_t_m_pro_1_1_t_m_p___text.html#a2ad3845a02f7fd35f5b9bd7a34f5bd52">isUsingBold</a>);</div>
+<div class="line"><a id="l00542" name="l00542"></a><span class="lineno">  542</span> </div>
+<div class="line"><a id="l00543" name="l00543"></a><span class="lineno">  543</span>            <span class="keywordflow">return</span> <a class="code hl_property" href="../../dc/dd6/class_t_m_pro_1_1_t_m_p___sub_mesh.html#adc8e38d6679306c54598bf48db166a3f">padding</a>;</div>
+<div class="line"><a id="l00544" name="l00544"></a><span class="lineno">  544</span>        }</div>
 <div class="ttc" id="aclass_t_m_pro_1_1_t_m_p___sub_mesh_html_adc8e38d6679306c54598bf48db166a3f"><div class="ttname"><a href="../../dc/dd6/class_t_m_pro_1_1_t_m_p___sub_mesh.html#adc8e38d6679306c54598bf48db166a3f">TMPro.TMP_SubMesh.padding</a></div><div class="ttdeci">float padding</div><div class="ttdoc">Padding value resulting for the property settings on the material.</div><div class="ttdef"><b>Definition:</b> TMP_SubMesh.cs:125</div></div>
 <div class="ttc" id="aclass_t_m_pro_1_1_t_m_p___text_html_a2ad3845a02f7fd35f5b9bd7a34f5bd52"><div class="ttname"><a href="../../d7/d32/class_t_m_pro_1_1_t_m_p___text.html#a2ad3845a02f7fd35f5b9bd7a34f5bd52">TMPro.TMP_Text.isUsingBold</a></div><div class="ttdeci">bool isUsingBold</div><div class="ttdoc">Property used in conjunction with padding calculation for the geometry.</div><div class="ttdef"><b>Definition:</b> TMP_Text.cs:555</div></div>
 <div class="ttc" id="aclass_t_m_pro_1_1_t_m_p___text_html_aa06b7d7a7054e899c0be4fa8ed9943b5"><div class="ttname"><a href="../../d7/d32/class_t_m_pro_1_1_t_m_p___text.html#aa06b7d7a7054e899c0be4fa8ed9943b5">TMPro.TMP_Text.extraPadding</a></div><div class="ttdeci">bool extraPadding</div><div class="ttdoc">Adds extra padding around each character. This may be necessary when the displayed text is very small...</div><div class="ttdef"><b>Definition:</b> TMP_Text.cs:850</div></div>
@@ -433,12 +433,12 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_isRegisteredForEven
 
 <p>Method returning the shared material assigned to the text object. </p>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
-<div class="fragment"><div class="line"><a id="l00502" name="l00502"></a><span class="lineno">  502</span>        {</div>
-<div class="line"><a id="l00503" name="l00503"></a><span class="lineno">  503</span>            <span class="keywordflow">if</span> (m_renderer == <span class="keyword">null</span>)</div>
-<div class="line"><a id="l00504" name="l00504"></a><span class="lineno">  504</span>                m_renderer = GetComponent&lt;Renderer&gt;();</div>
-<div class="line"><a id="l00505" name="l00505"></a><span class="lineno">  505</span> </div>
-<div class="line"><a id="l00506" name="l00506"></a><span class="lineno">  506</span>            <span class="keywordflow">return</span> m_renderer.sharedMaterial;</div>
-<div class="line"><a id="l00507" name="l00507"></a><span class="lineno">  507</span>        }</div>
+<div class="fragment"><div class="line"><a id="l00504" name="l00504"></a><span class="lineno">  504</span>        {</div>
+<div class="line"><a id="l00505" name="l00505"></a><span class="lineno">  505</span>            <span class="keywordflow">if</span> (m_renderer == <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00506" name="l00506"></a><span class="lineno">  506</span>                m_renderer = GetComponent&lt;Renderer&gt;();</div>
+<div class="line"><a id="l00507" name="l00507"></a><span class="lineno">  507</span> </div>
+<div class="line"><a id="l00508" name="l00508"></a><span class="lineno">  508</span>            <span class="keywordflow">return</span> m_renderer.sharedMaterial;</div>
+<div class="line"><a id="l00509" name="l00509"></a><span class="lineno">  509</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -489,11 +489,14 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_isRegisteredForEven
 <div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>            m_isRegisteredForEvents = <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span> </div>
 <div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>            <span class="comment">// Notify parent text object</span></div>
-<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>            m_TextComponent.<a class="code hl_property" href="../../d7/d32/class_t_m_pro_1_1_t_m_p___text.html#a7e0fb1ed735ea717f9b98373b9de6e73">havePropertiesChanged</a> = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>            m_TextComponent.<a class="code hl_function" href="../../df/da5/class_t_m_pro_1_1_text_mesh_pro.html#a28274571ae3e165a5db057949ae2f3ea">SetAllDirty</a>();</div>
-<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>        }</div>
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>            <span class="keywordflow">if</span> (m_TextComponent != <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>            {</div>
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>                m_TextComponent.<a class="code hl_property" href="../../d7/d32/class_t_m_pro_1_1_t_m_p___text.html#a7e0fb1ed735ea717f9b98373b9de6e73">havePropertiesChanged</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>                m_TextComponent.<a class="code hl_function" href="../../df/da5/class_t_m_pro_1_1_text_mesh_pro.html#a28274571ae3e165a5db057949ae2f3ea">SetAllDirty</a>();</div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>            }</div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>        }</div>
 <div class="ttc" id="aclass_t_m_pro_1_1_t_m_p___text_html_a7e0fb1ed735ea717f9b98373b9de6e73"><div class="ttname"><a href="../../d7/d32/class_t_m_pro_1_1_t_m_p___text.html#a7e0fb1ed735ea717f9b98373b9de6e73">TMPro.TMP_Text.havePropertiesChanged</a></div><div class="ttdeci">bool havePropertiesChanged</div><div class="ttdoc">Property tracking if any of the text properties have changed. Flag is set before the text is regenera...</div><div class="ttdef"><b>Definition:</b> TMP_Text.cs:1137</div></div>
-<div class="ttc" id="aclass_t_m_pro_1_1_text_mesh_pro_html_a28274571ae3e165a5db057949ae2f3ea"><div class="ttname"><a href="../../df/da5/class_t_m_pro_1_1_text_mesh_pro.html#a28274571ae3e165a5db057949ae2f3ea">TMPro.TextMeshPro.SetAllDirty</a></div><div class="ttdeci">override void SetAllDirty()</div><div class="ttdef"><b>Definition:</b> TextMeshPro.cs:247</div></div>
+<div class="ttc" id="aclass_t_m_pro_1_1_text_mesh_pro_html_a28274571ae3e165a5db057949ae2f3ea"><div class="ttname"><a href="../../df/da5/class_t_m_pro_1_1_text_mesh_pro.html#a28274571ae3e165a5db057949ae2f3ea">TMPro.TextMeshPro.SetAllDirty</a></div><div class="ttdeci">override void SetAllDirty()</div><div class="ttdef"><b>Definition:</b> TextMeshPro.cs:255</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -607,16 +610,16 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_isRegisteredForEven
 </div><div class="memdoc">
 
 <p></p>
-<div class="fragment"><div class="line"><a id="l00577" name="l00577"></a><span class="lineno">  577</span>        {</div>
-<div class="line"><a id="l00578" name="l00578"></a><span class="lineno">  578</span>            <span class="comment">//if (!this.enabled)</span></div>
-<div class="line"><a id="l00579" name="l00579"></a><span class="lineno">  579</span>            <span class="comment">//    return;</span></div>
-<div class="line"><a id="l00580" name="l00580"></a><span class="lineno">  580</span> </div>
-<div class="line"><a id="l00581" name="l00581"></a><span class="lineno">  581</span>            <a class="code hl_function" href="../../dc/dd6/class_t_m_pro_1_1_t_m_p___sub_mesh.html#a36148dca95029b37eed7ad450024d886">UpdateMaterial</a>();</div>
+<div class="fragment"><div class="line"><a id="l00579" name="l00579"></a><span class="lineno">  579</span>        {</div>
+<div class="line"><a id="l00580" name="l00580"></a><span class="lineno">  580</span>            <span class="comment">//if (!this.enabled)</span></div>
+<div class="line"><a id="l00581" name="l00581"></a><span class="lineno">  581</span>            <span class="comment">//    return;</span></div>
 <div class="line"><a id="l00582" name="l00582"></a><span class="lineno">  582</span> </div>
-<div class="line"><a id="l00583" name="l00583"></a><span class="lineno">  583</span>            <span class="comment">//m_materialDirty = true;</span></div>
-<div class="line"><a id="l00584" name="l00584"></a><span class="lineno">  584</span>            <span class="comment">//TMP_UpdateRegistry.RegisterCanvasElementForGraphicRebuild((ICanvasElement)this);</span></div>
-<div class="line"><a id="l00585" name="l00585"></a><span class="lineno">  585</span>        }</div>
-<div class="ttc" id="aclass_t_m_pro_1_1_t_m_p___sub_mesh_html_a36148dca95029b37eed7ad450024d886"><div class="ttname"><a href="../../dc/dd6/class_t_m_pro_1_1_t_m_p___sub_mesh.html#a36148dca95029b37eed7ad450024d886">TMPro.TMP_SubMesh.UpdateMaterial</a></div><div class="ttdeci">void UpdateMaterial()</div><div class="ttdef"><b>Definition:</b> TMP_SubMesh.cs:591</div></div>
+<div class="line"><a id="l00583" name="l00583"></a><span class="lineno">  583</span>            <a class="code hl_function" href="../../dc/dd6/class_t_m_pro_1_1_t_m_p___sub_mesh.html#a36148dca95029b37eed7ad450024d886">UpdateMaterial</a>();</div>
+<div class="line"><a id="l00584" name="l00584"></a><span class="lineno">  584</span> </div>
+<div class="line"><a id="l00585" name="l00585"></a><span class="lineno">  585</span>            <span class="comment">//m_materialDirty = true;</span></div>
+<div class="line"><a id="l00586" name="l00586"></a><span class="lineno">  586</span>            <span class="comment">//TMP_UpdateRegistry.RegisterCanvasElementForGraphicRebuild((ICanvasElement)this);</span></div>
+<div class="line"><a id="l00587" name="l00587"></a><span class="lineno">  587</span>        }</div>
+<div class="ttc" id="aclass_t_m_pro_1_1_t_m_p___sub_mesh_html_a36148dca95029b37eed7ad450024d886"><div class="ttname"><a href="../../dc/dd6/class_t_m_pro_1_1_t_m_p___sub_mesh.html#a36148dca95029b37eed7ad450024d886">TMPro.TMP_SubMesh.UpdateMaterial</a></div><div class="ttdeci">void UpdateMaterial()</div><div class="ttdef"><b>Definition:</b> TMP_SubMesh.cs:593</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -651,22 +654,22 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_isRegisteredForEven
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line"><a id="l00515" name="l00515"></a><span class="lineno">  515</span>        {</div>
-<div class="line"><a id="l00516" name="l00516"></a><span class="lineno">  516</span>            <span class="comment">//Debug.Log(&quot;*** SetSharedMaterial() *** FRAME (&quot; + Time.frameCount + &quot;)&quot;);</span></div>
-<div class="line"><a id="l00517" name="l00517"></a><span class="lineno">  517</span> </div>
-<div class="line"><a id="l00518" name="l00518"></a><span class="lineno">  518</span>            <span class="comment">// Assign new material.</span></div>
-<div class="line"><a id="l00519" name="l00519"></a><span class="lineno">  519</span>            m_sharedMaterial = mat;</div>
-<div class="line"><a id="l00520" name="l00520"></a><span class="lineno">  520</span> </div>
-<div class="line"><a id="l00521" name="l00521"></a><span class="lineno">  521</span>            <span class="comment">// Compute and Set new padding values for this new material.</span></div>
-<div class="line"><a id="l00522" name="l00522"></a><span class="lineno">  522</span>            m_padding = <a class="code hl_function" href="../../dc/dd6/class_t_m_pro_1_1_t_m_p___sub_mesh.html#a9bcd237fd39eccac2018a497412504ed">GetPaddingForMaterial</a>();</div>
-<div class="line"><a id="l00523" name="l00523"></a><span class="lineno">  523</span> </div>
-<div class="line"><a id="l00524" name="l00524"></a><span class="lineno">  524</span>            <a class="code hl_function" href="../../dc/dd6/class_t_m_pro_1_1_t_m_p___sub_mesh.html#a8df49466a47cb2d29a910fb00dfa2af5">SetMaterialDirty</a>();</div>
+<div class="fragment"><div class="line"><a id="l00517" name="l00517"></a><span class="lineno">  517</span>        {</div>
+<div class="line"><a id="l00518" name="l00518"></a><span class="lineno">  518</span>            <span class="comment">//Debug.Log(&quot;*** SetSharedMaterial() *** FRAME (&quot; + Time.frameCount + &quot;)&quot;);</span></div>
+<div class="line"><a id="l00519" name="l00519"></a><span class="lineno">  519</span> </div>
+<div class="line"><a id="l00520" name="l00520"></a><span class="lineno">  520</span>            <span class="comment">// Assign new material.</span></div>
+<div class="line"><a id="l00521" name="l00521"></a><span class="lineno">  521</span>            m_sharedMaterial = mat;</div>
+<div class="line"><a id="l00522" name="l00522"></a><span class="lineno">  522</span> </div>
+<div class="line"><a id="l00523" name="l00523"></a><span class="lineno">  523</span>            <span class="comment">// Compute and Set new padding values for this new material.</span></div>
+<div class="line"><a id="l00524" name="l00524"></a><span class="lineno">  524</span>            m_padding = <a class="code hl_function" href="../../dc/dd6/class_t_m_pro_1_1_t_m_p___sub_mesh.html#a9bcd237fd39eccac2018a497412504ed">GetPaddingForMaterial</a>();</div>
 <div class="line"><a id="l00525" name="l00525"></a><span class="lineno">  525</span> </div>
-<div class="line"><a id="l00526" name="l00526"></a><span class="lineno">  526</span><span class="preprocessor">            #if UNITY_EDITOR</span></div>
-<div class="line"><a id="l00527" name="l00527"></a><span class="lineno">  527</span>            <span class="keywordflow">if</span> (m_sharedMaterial != <span class="keyword">null</span>)</div>
-<div class="line"><a id="l00528" name="l00528"></a><span class="lineno">  528</span>                gameObject.name = <span class="stringliteral">&quot;TMP SubMesh [&quot;</span> + m_sharedMaterial.name + <span class="stringliteral">&quot;]&quot;</span>;</div>
-<div class="line"><a id="l00529" name="l00529"></a><span class="lineno">  529</span><span class="preprocessor">            #endif</span></div>
-<div class="line"><a id="l00530" name="l00530"></a><span class="lineno">  530</span>        }</div>
+<div class="line"><a id="l00526" name="l00526"></a><span class="lineno">  526</span>            <a class="code hl_function" href="../../dc/dd6/class_t_m_pro_1_1_t_m_p___sub_mesh.html#a8df49466a47cb2d29a910fb00dfa2af5">SetMaterialDirty</a>();</div>
+<div class="line"><a id="l00527" name="l00527"></a><span class="lineno">  527</span> </div>
+<div class="line"><a id="l00528" name="l00528"></a><span class="lineno">  528</span><span class="preprocessor">            #if UNITY_EDITOR</span></div>
+<div class="line"><a id="l00529" name="l00529"></a><span class="lineno">  529</span>            <span class="keywordflow">if</span> (m_sharedMaterial != <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00530" name="l00530"></a><span class="lineno">  530</span>                gameObject.name = <span class="stringliteral">&quot;TMP SubMesh [&quot;</span> + m_sharedMaterial.name + <span class="stringliteral">&quot;]&quot;</span>;</div>
+<div class="line"><a id="l00531" name="l00531"></a><span class="lineno">  531</span><span class="preprocessor">            #endif</span></div>
+<div class="line"><a id="l00532" name="l00532"></a><span class="lineno">  532</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -686,18 +689,18 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_isRegisteredForEven
 </div><div class="memdoc">
 
 <p></p>
-<div class="fragment"><div class="line"><a id="l00560" name="l00560"></a><span class="lineno">  560</span>        {</div>
-<div class="line"><a id="l00561" name="l00561"></a><span class="lineno">  561</span>            <span class="keywordflow">if</span> (!this.enabled)</div>
-<div class="line"><a id="l00562" name="l00562"></a><span class="lineno">  562</span>                <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00563" name="l00563"></a><span class="lineno">  563</span> </div>
-<div class="line"><a id="l00564" name="l00564"></a><span class="lineno">  564</span>            <span class="comment">// This is called on the parent TextMeshPro component.</span></div>
-<div class="line"><a id="l00565" name="l00565"></a><span class="lineno">  565</span>            <span class="keywordflow">if</span> (m_TextComponent != <span class="keyword">null</span>)</div>
-<div class="line"><a id="l00566" name="l00566"></a><span class="lineno">  566</span>            {</div>
-<div class="line"><a id="l00567" name="l00567"></a><span class="lineno">  567</span>                m_TextComponent.<a class="code hl_property" href="../../d7/d32/class_t_m_pro_1_1_t_m_p___text.html#a7e0fb1ed735ea717f9b98373b9de6e73">havePropertiesChanged</a> = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00568" name="l00568"></a><span class="lineno">  568</span>                m_TextComponent.<a class="code hl_function" href="../../df/da5/class_t_m_pro_1_1_text_mesh_pro.html#a8ca7b09fd7f2319069c84e72c0db0fa8">SetVerticesDirty</a>();</div>
-<div class="line"><a id="l00569" name="l00569"></a><span class="lineno">  569</span>            }</div>
-<div class="line"><a id="l00570" name="l00570"></a><span class="lineno">  570</span>        }</div>
-<div class="ttc" id="aclass_t_m_pro_1_1_text_mesh_pro_html_a8ca7b09fd7f2319069c84e72c0db0fa8"><div class="ttname"><a href="../../df/da5/class_t_m_pro_1_1_text_mesh_pro.html#a8ca7b09fd7f2319069c84e72c0db0fa8">TMPro.TextMeshPro.SetVerticesDirty</a></div><div class="ttdeci">override void SetVerticesDirty()</div><div class="ttdoc">Schedule rebuilding of the text geometry.</div><div class="ttdef"><b>Definition:</b> TextMeshPro.cs:200</div></div>
+<div class="fragment"><div class="line"><a id="l00562" name="l00562"></a><span class="lineno">  562</span>        {</div>
+<div class="line"><a id="l00563" name="l00563"></a><span class="lineno">  563</span>            <span class="keywordflow">if</span> (!this.enabled)</div>
+<div class="line"><a id="l00564" name="l00564"></a><span class="lineno">  564</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00565" name="l00565"></a><span class="lineno">  565</span> </div>
+<div class="line"><a id="l00566" name="l00566"></a><span class="lineno">  566</span>            <span class="comment">// This is called on the parent TextMeshPro component.</span></div>
+<div class="line"><a id="l00567" name="l00567"></a><span class="lineno">  567</span>            <span class="keywordflow">if</span> (m_TextComponent != <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00568" name="l00568"></a><span class="lineno">  568</span>            {</div>
+<div class="line"><a id="l00569" name="l00569"></a><span class="lineno">  569</span>                m_TextComponent.<a class="code hl_property" href="../../d7/d32/class_t_m_pro_1_1_t_m_p___text.html#a7e0fb1ed735ea717f9b98373b9de6e73">havePropertiesChanged</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00570" name="l00570"></a><span class="lineno">  570</span>                m_TextComponent.<a class="code hl_function" href="../../df/da5/class_t_m_pro_1_1_text_mesh_pro.html#a8ca7b09fd7f2319069c84e72c0db0fa8">SetVerticesDirty</a>();</div>
+<div class="line"><a id="l00571" name="l00571"></a><span class="lineno">  571</span>            }</div>
+<div class="line"><a id="l00572" name="l00572"></a><span class="lineno">  572</span>        }</div>
+<div class="ttc" id="aclass_t_m_pro_1_1_text_mesh_pro_html_a8ca7b09fd7f2319069c84e72c0db0fa8"><div class="ttname"><a href="../../df/da5/class_t_m_pro_1_1_text_mesh_pro.html#a8ca7b09fd7f2319069c84e72c0db0fa8">TMPro.TextMeshPro.SetVerticesDirty</a></div><div class="ttdeci">override void SetVerticesDirty()</div><div class="ttdoc">Schedule rebuilding of the text geometry.</div><div class="ttdef"><b>Definition:</b> TextMeshPro.cs:208</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -725,27 +728,27 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_isRegisteredForEven
 </div><div class="memdoc">
 
 <p></p>
-<div class="fragment"><div class="line"><a id="l00592" name="l00592"></a><span class="lineno">  592</span>        {</div>
-<div class="line"><a id="l00593" name="l00593"></a><span class="lineno">  593</span>            <span class="comment">//Debug.Log(&quot;*** STO - UpdateMaterial() *** FRAME (&quot; + Time.frameCount + &quot;)&quot;);</span></div>
-<div class="line"><a id="l00594" name="l00594"></a><span class="lineno">  594</span> </div>
-<div class="line"><a id="l00595" name="l00595"></a><span class="lineno">  595</span>            <span class="keywordflow">if</span> (<a class="code hl_property" href="../../dc/dd6/class_t_m_pro_1_1_t_m_p___sub_mesh.html#a5eebffcd056afe0d3be79f30d611d780">renderer</a> == <span class="keyword">null</span> || m_sharedMaterial == <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
+<div class="fragment"><div class="line"><a id="l00594" name="l00594"></a><span class="lineno">  594</span>        {</div>
+<div class="line"><a id="l00595" name="l00595"></a><span class="lineno">  595</span>            <span class="comment">//Debug.Log(&quot;*** STO - UpdateMaterial() *** FRAME (&quot; + Time.frameCount + &quot;)&quot;);</span></div>
 <div class="line"><a id="l00596" name="l00596"></a><span class="lineno">  596</span> </div>
-<div class="line"><a id="l00597" name="l00597"></a><span class="lineno">  597</span>            m_renderer.sharedMaterial = m_sharedMaterial;</div>
+<div class="line"><a id="l00597" name="l00597"></a><span class="lineno">  597</span>            <span class="keywordflow">if</span> (<a class="code hl_property" href="../../dc/dd6/class_t_m_pro_1_1_t_m_p___sub_mesh.html#a5eebffcd056afe0d3be79f30d611d780">renderer</a> == <span class="keyword">null</span> || m_sharedMaterial == <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00598" name="l00598"></a><span class="lineno">  598</span> </div>
-<div class="line"><a id="l00599" name="l00599"></a><span class="lineno">  599</span>            <span class="comment">// Special handling to keep the Culling of the material in sync with parent text object</span></div>
-<div class="line"><a id="l00600" name="l00600"></a><span class="lineno">  600</span>            <span class="keywordflow">if</span> (m_sharedMaterial.HasProperty(ShaderUtilities.ShaderTag_CullMode))</div>
-<div class="line"><a id="l00601" name="l00601"></a><span class="lineno">  601</span>            {</div>
-<div class="line"><a id="l00602" name="l00602"></a><span class="lineno">  602</span>                <span class="keywordtype">float</span> cullMode = <a class="code hl_property" href="../../dc/dd6/class_t_m_pro_1_1_t_m_p___sub_mesh.html#a5c48ea20ac8a737d8f7f4170250931f6">textComponent</a>.<a class="code hl_property" href="../../d7/d32/class_t_m_pro_1_1_t_m_p___text.html#ae8499604279c5c7af4ce94b3ba839a32">fontSharedMaterial</a>.GetFloat(ShaderUtilities.ShaderTag_CullMode);</div>
-<div class="line"><a id="l00603" name="l00603"></a><span class="lineno">  603</span>                m_sharedMaterial.SetFloat(ShaderUtilities.ShaderTag_CullMode, cullMode);</div>
-<div class="line"><a id="l00604" name="l00604"></a><span class="lineno">  604</span>            }</div>
-<div class="line"><a id="l00605" name="l00605"></a><span class="lineno">  605</span> </div>
-<div class="line"><a id="l00606" name="l00606"></a><span class="lineno">  606</span><span class="preprocessor">            #if UNITY_EDITOR</span></div>
-<div class="line"><a id="l00607" name="l00607"></a><span class="lineno">  607</span>            <span class="keywordflow">if</span> (m_sharedMaterial != <span class="keyword">null</span> &amp;&amp; gameObject.name != <span class="stringliteral">&quot;TMP SubMesh [&quot;</span> + m_sharedMaterial.name + <span class="stringliteral">&quot;]&quot;</span>)</div>
-<div class="line"><a id="l00608" name="l00608"></a><span class="lineno">  608</span>                gameObject.name = <span class="stringliteral">&quot;TMP SubMesh [&quot;</span> + m_sharedMaterial.name + <span class="stringliteral">&quot;]&quot;</span>;</div>
-<div class="line"><a id="l00609" name="l00609"></a><span class="lineno">  609</span><span class="preprocessor">            #endif</span></div>
-<div class="line"><a id="l00610" name="l00610"></a><span class="lineno">  610</span>        }</div>
+<div class="line"><a id="l00599" name="l00599"></a><span class="lineno">  599</span>            m_renderer.sharedMaterial = m_sharedMaterial;</div>
+<div class="line"><a id="l00600" name="l00600"></a><span class="lineno">  600</span> </div>
+<div class="line"><a id="l00601" name="l00601"></a><span class="lineno">  601</span>            <span class="comment">// Special handling to keep the Culling of the material in sync with parent text object</span></div>
+<div class="line"><a id="l00602" name="l00602"></a><span class="lineno">  602</span>            <span class="keywordflow">if</span> (m_sharedMaterial.HasProperty(ShaderUtilities.ShaderTag_CullMode))</div>
+<div class="line"><a id="l00603" name="l00603"></a><span class="lineno">  603</span>            {</div>
+<div class="line"><a id="l00604" name="l00604"></a><span class="lineno">  604</span>                <span class="keywordtype">float</span> cullMode = <a class="code hl_property" href="../../dc/dd6/class_t_m_pro_1_1_t_m_p___sub_mesh.html#a5c48ea20ac8a737d8f7f4170250931f6">textComponent</a>.<a class="code hl_property" href="../../d7/d32/class_t_m_pro_1_1_t_m_p___text.html#ae8499604279c5c7af4ce94b3ba839a32">fontSharedMaterial</a>.GetFloat(ShaderUtilities.ShaderTag_CullMode);</div>
+<div class="line"><a id="l00605" name="l00605"></a><span class="lineno">  605</span>                m_sharedMaterial.SetFloat(ShaderUtilities.ShaderTag_CullMode, cullMode);</div>
+<div class="line"><a id="l00606" name="l00606"></a><span class="lineno">  606</span>            }</div>
+<div class="line"><a id="l00607" name="l00607"></a><span class="lineno">  607</span> </div>
+<div class="line"><a id="l00608" name="l00608"></a><span class="lineno">  608</span><span class="preprocessor">            #if UNITY_EDITOR</span></div>
+<div class="line"><a id="l00609" name="l00609"></a><span class="lineno">  609</span>            <span class="keywordflow">if</span> (m_sharedMaterial != <span class="keyword">null</span> &amp;&amp; gameObject.name != <span class="stringliteral">&quot;TMP SubMesh [&quot;</span> + m_sharedMaterial.name + <span class="stringliteral">&quot;]&quot;</span>)</div>
+<div class="line"><a id="l00610" name="l00610"></a><span class="lineno">  610</span>                gameObject.name = <span class="stringliteral">&quot;TMP SubMesh [&quot;</span> + m_sharedMaterial.name + <span class="stringliteral">&quot;]&quot;</span>;</div>
+<div class="line"><a id="l00611" name="l00611"></a><span class="lineno">  611</span><span class="preprocessor">            #endif</span></div>
+<div class="line"><a id="l00612" name="l00612"></a><span class="lineno">  612</span>        }</div>
 <div class="ttc" id="aclass_t_m_pro_1_1_t_m_p___sub_mesh_html_a5eebffcd056afe0d3be79f30d611d780"><div class="ttname"><a href="../../dc/dd6/class_t_m_pro_1_1_t_m_p___sub_mesh.html#a5eebffcd056afe0d3be79f30d611d780">TMPro.TMP_SubMesh.renderer</a></div><div class="ttdeci">new Renderer renderer</div><div class="ttdoc">The Mesh Renderer of this text sub object.</div><div class="ttdef"><b>Definition:</b> TMP_SubMesh.cs:137</div></div>
-<div class="ttc" id="aclass_t_m_pro_1_1_t_m_p___text_html_ae8499604279c5c7af4ce94b3ba839a32"><div class="ttname"><a href="../../d7/d32/class_t_m_pro_1_1_t_m_p___text.html#ae8499604279c5c7af4ce94b3ba839a32">TMPro.TMP_Text.fontSharedMaterial</a></div><div class="ttdeci">virtual Material fontSharedMaterial</div><div class="ttdoc">The material to be assigned to this text object.</div><div class="ttdef"><b>Definition:</b> TMP_Text.cs:176</div></div>
+<div class="ttc" id="aclass_t_m_pro_1_1_t_m_p___text_html_ae8499604279c5c7af4ce94b3ba839a32"><div class="ttname"><a href="../../d7/d32/class_t_m_pro_1_1_t_m_p___text.html#ae8499604279c5c7af4ce94b3ba839a32">TMPro.TMP_Text.fontSharedMaterial</a></div><div class="ttdeci">virtual Material fontSharedMaterial</div><div class="ttdoc">The material to be assigned to this text object.</div><div class="ttdef"><b>Definition:</b> TMP_Text.cs:186</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -783,9 +786,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_isRegisteredForEven
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line"><a id="l00551" name="l00551"></a><span class="lineno">  551</span>        {</div>
-<div class="line"><a id="l00552" name="l00552"></a><span class="lineno">  552</span>            m_padding = ShaderUtilities.GetPadding(m_sharedMaterial, isExtraPadding, isUsingBold);</div>
-<div class="line"><a id="l00553" name="l00553"></a><span class="lineno">  553</span>        }</div>
+<div class="fragment"><div class="line"><a id="l00553" name="l00553"></a><span class="lineno">  553</span>        {</div>
+<div class="line"><a id="l00554" name="l00554"></a><span class="lineno">  554</span>            m_padding = ShaderUtilities.GetPadding(m_sharedMaterial, isExtraPadding, isUsingBold);</div>
+<div class="line"><a id="l00555" name="l00555"></a><span class="lineno">  555</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -826,7 +829,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_isRegisteredForEven
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>                <a class="code hl_function" href="../../dc/dd6/class_t_m_pro_1_1_t_m_p___sub_mesh.html#a1793e4ae425e416cf4dc4cac19be5d5b">SetSharedMaterial</a>(m_fallbackMaterial);</div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>            }</div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        }</div>
-<div class="ttc" id="aclass_t_m_pro_1_1_t_m_p___sub_mesh_html_a1793e4ae425e416cf4dc4cac19be5d5b"><div class="ttname"><a href="../../dc/dd6/class_t_m_pro_1_1_t_m_p___sub_mesh.html#a1793e4ae425e416cf4dc4cac19be5d5b">TMPro.TMP_SubMesh.SetSharedMaterial</a></div><div class="ttdeci">void SetSharedMaterial(Material mat)</div><div class="ttdoc">Method to set the shared material.</div><div class="ttdef"><b>Definition:</b> TMP_SubMesh.cs:514</div></div>
+<div class="ttc" id="aclass_t_m_pro_1_1_t_m_p___sub_mesh_html_a1793e4ae425e416cf4dc4cac19be5d5b"><div class="ttname"><a href="../../dc/dd6/class_t_m_pro_1_1_t_m_p___sub_mesh.html#a1793e4ae425e416cf4dc4cac19be5d5b">TMPro.TMP_SubMesh.SetSharedMaterial</a></div><div class="ttdeci">void SetSharedMaterial(Material mat)</div><div class="ttdoc">Method to set the shared material.</div><div class="ttdef"><b>Definition:</b> TMP_SubMesh.cs:516</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1183,7 +1186,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_isRegisteredForEven
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>F:/GitHub/NullReferenceException/Library/PackageCache/com.unity.textmeshpro@3.0.1/Scripts/Runtime/TMP_SubMesh.cs</li>
+<li>F:/GitHub/NullReferenceException/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMP_SubMesh.cs</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

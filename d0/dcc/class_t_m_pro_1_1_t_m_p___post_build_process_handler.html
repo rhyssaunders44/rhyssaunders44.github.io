@@ -69,7 +69,6 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
-<a href="#pri-static-methods">Static Private Member Functions</a> &#124;
 <a href="../../d1/d04/class_t_m_pro_1_1_t_m_p___post_build_process_handler-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">TMPro.TMP_PostBuildProcessHandler Class Reference</div></div>
 </div><!--header-->
@@ -79,59 +78,8 @@ $(function() {
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a9bde99d05c661af7fece9c790de8905a"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dcc/class_t_m_pro_1_1_t_m_p___post_build_process_handler.html#a9bde99d05c661af7fece9c790de8905a">OnPostprocessBuild</a> (BuildTarget target, string pathToBuiltProject)</td></tr>
 <tr class="separator:a9bde99d05c661af7fece9c790de8905a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-methods" name="pri-static-methods"></a>
-Static Private Member Functions</h2></td></tr>
-<tr class="memitem:a20591bceab632424ef51569ad9003a1c"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dcc/class_t_m_pro_1_1_t_m_p___post_build_process_handler.html#a20591bceab632424ef51569ad9003a1c">GetEssentialProjectResourcesPath</a> ()</td></tr>
-<tr class="separator:a20591bceab632424ef51569ad9003a1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a90227bb84a604f314d278cce8b9fe3b5"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dcc/class_t_m_pro_1_1_t_m_p___post_build_process_handler.html#a90227bb84a604f314d278cce8b9fe3b5">ValidateLocation</a> (string[] paths, string projectPath)</td></tr>
-<tr class="separator:a90227bb84a604f314d278cce8b9fe3b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a20591bceab632424ef51569ad9003a1c" name="a20591bceab632424ef51569ad9003a1c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a20591bceab632424ef51569ad9003a1c">&#9670;&nbsp;</a></span>GetEssentialProjectResourcesPath()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static string TMPro.TMP_PostBuildProcessHandler.GetEssentialProjectResourcesPath </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<div class="fragment"><div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        {</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>            <span class="comment">// Find the potential location of the TextMesh Pro folder in the user project.</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>            <span class="keywordtype">string</span> projectPath = Path.GetFullPath(<span class="stringliteral">&quot;Assets/..&quot;</span>);</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>            <span class="keywordflow">if</span> (Directory.Exists(projectPath))</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>            {</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>                <span class="comment">// Search for default location of TMP Essential Resources</span></div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>                <span class="keywordflow">if</span> (Directory.Exists(projectPath + <span class="stringliteral">&quot;/Assets/TextMesh Pro/Resources&quot;</span>))</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>                {</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>                    <span class="keywordflow">return</span> <span class="stringliteral">&quot;Assets/TextMesh Pro&quot;</span>;</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>                }</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>                <span class="comment">// Search for potential alternative locations in the user project</span></div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>                <span class="keywordtype">string</span>[] matchingPaths = Directory.GetDirectories(projectPath, <span class="stringliteral">&quot;TextMesh Pro&quot;</span>, SearchOption.AllDirectories);</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>                projectPath = ValidateLocation(matchingPaths, projectPath);</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>                <span class="keywordflow">if</span> (projectPath != <span class="keyword">null</span>) <span class="keywordflow">return</span> projectPath;</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            }</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        }</div>
-</div><!-- fragment -->
-</div>
-</div>
 <a id="a9bde99d05c661af7fece9c790de8905a" name="a9bde99d05c661af7fece9c790de8905a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9bde99d05c661af7fece9c790de8905a">&#9670;&nbsp;</a></span>OnPostprocessBuild()</h2>
 
@@ -166,70 +114,25 @@ Static Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <div class="fragment"><div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        {</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>            <span class="comment">// Check if TMP Essential Resource are present in user project.</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>            <span class="keywordflow">if</span> (target == BuildTarget.iOS &amp;&amp; File.Exists(GetEssentialProjectResourcesPath() + <span class="stringliteral">&quot;/Resources/TMP Settings.asset&quot;</span>) &amp;&amp; TMP_Settings.enableEmojiSupport)</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>            {</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>                <span class="keywordtype">string</span> file = Path.Combine(pathToBuiltProject, <span class="stringliteral">&quot;Classes/UI/Keyboard.mm&quot;</span>);</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>                <span class="keywordtype">string</span> content = File.ReadAllText(file);</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>                content = content.Replace(<span class="stringliteral">&quot;FILTER_EMOJIS_IOS_KEYBOARD 1&quot;</span>, <span class="stringliteral">&quot;FILTER_EMOJIS_IOS_KEYBOARD 0&quot;</span>);</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>                File.WriteAllText(file, content);</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>            }</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        }</div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="a90227bb84a604f314d278cce8b9fe3b5" name="a90227bb84a604f314d278cce8b9fe3b5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a90227bb84a604f314d278cce8b9fe3b5">&#9670;&nbsp;</a></span>ValidateLocation()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static string TMPro.TMP_PostBuildProcessHandler.ValidateLocation </td>
-          <td>(</td>
-          <td class="paramtype">string[]&#160;</td>
-          <td class="paramname"><em>paths</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>projectPath</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<div class="fragment"><div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        {</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; paths.Length; i++)</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            {</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>                <span class="comment">// Check if any of the matching directories contain a GUISkins directory.</span></div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>                <span class="keywordflow">if</span> (Directory.Exists(paths[i] + <span class="stringliteral">&quot;/Resources&quot;</span>))</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>                {</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>                    <span class="keywordtype">string</span> folderPath = paths[i].Replace(projectPath, <span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>                    folderPath = folderPath.TrimStart(<span class="charliteral">&#39;\\&#39;</span>, <span class="charliteral">&#39;/&#39;</span>);</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>                    <span class="keywordflow">return</span> folderPath;</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>                }</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            }</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        }</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>            <span class="keywordflow">if</span> (target == BuildTarget.iOS)</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>            {</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>                <span class="comment">// Try loading the TMP Settings</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>                TMP_Settings settings = Resources.Load&lt;TMP_Settings&gt;(<span class="stringliteral">&quot;TMP Settings&quot;</span>);</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>                <span class="keywordflow">if</span> (settings == <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>                    <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>                <span class="keywordtype">string</span> file = Path.Combine(pathToBuiltProject, <span class="stringliteral">&quot;Classes/UI/Keyboard.mm&quot;</span>);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>                <span class="keywordtype">string</span> content = File.ReadAllText(file);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>                content = content.Replace(<span class="stringliteral">&quot;FILTER_EMOJIS_IOS_KEYBOARD 1&quot;</span>, <span class="stringliteral">&quot;FILTER_EMOJIS_IOS_KEYBOARD 0&quot;</span>);</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>                File.WriteAllText(file, content);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>            }</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>F:/GitHub/NullReferenceException/Library/PackageCache/com.unity.textmeshpro@3.0.1/Scripts/Editor/TMP_PostBuildProcessHandler.cs</li>
+<li>F:/GitHub/NullReferenceException/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Editor/TMP_PostBuildProcessHandler.cs</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
